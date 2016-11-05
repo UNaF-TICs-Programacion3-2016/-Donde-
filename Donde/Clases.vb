@@ -4,22 +4,21 @@
 
 Public Class Persona
 
-    
-    'Private Nombre, Apellido As String
-    'Private Dni, Cuil, EstadoCivil As Integer
-    'Private FechaNacimiento As Date
+
 
     Private Nombre, Apellido, Dni, Tipo, Numero, DigitoVerificador As TextBox
     Private CmbSexoa, CmbEstadoCivila As ComboBox
     Private DtpFNacimientoa As DateTimePicker
 
+    Dim Adaptador As OracleDataAdapter
+    Dim PersonaDS As New DataSet
+    Dim Registro As DataRow
+
     Public Sub AgregarPersona()
 
         Dim Conexion As New OracleConnection("Data Source=localhost;User Id=Dorian;Password=123456789;")
 
-        Dim Adaptador As OracleDataAdapter
-        Dim PersonaDS As New DataSet
-        Dim Registro As DataRow
+      
 
         Dim InsertCmd As New OracleCommand
         Dim UpdateCmd As New OracleCommand
@@ -111,4 +110,3 @@ End Class
 
 
 
-n

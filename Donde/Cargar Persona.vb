@@ -12,8 +12,6 @@ End Enum
 
 Public Class F_CPersona
 
-    
-
     Public Conexion As New OracleConnection("Data Source=localhost;User Id=Dorian;Password=123456789;")
 
     Dim Adaptador As OracleDataAdapter
