@@ -5,9 +5,9 @@
 Public Class Persona
 
     
-    'Private Nombre, Apellido As String
-    'Private Dni, Cuil, EstadoCivil As Integer
-    'Private FechaNacimiento As Date
+    Private Nombre, Apellido As String
+    Private Dni, Cuil, EstadoCivil As Integer
+    Private FechaNacimiento As Date
 
     Private Nombre, Apellido, Dni, Tipo, Numero, DigitoVerificador As TextBox
     Private CmbSexoa, CmbEstadoCivila As ComboBox
