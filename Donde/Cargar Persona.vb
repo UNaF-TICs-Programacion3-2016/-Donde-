@@ -27,24 +27,24 @@ Public Class F_CPersona
         CmbEstadoCivil.Items.Insert(EstadoCivil.Soltero, EstadoCivil.Soltero.ToString)
         CmbEstadoCivil.Items.Insert(EstadoCivil.Casado, EstadoCivil.Casado.ToString)
 
-        Adaptador = New OracleDataAdapter("Select * From Persona Where Id_Persona = " + F_Donde.IdPersona.ToString, Conexion)
-        Adaptador.Fill(PersonaDS, "persona")
+        Adaptador = New OracleDataAdapter("Select * From Persona_cab Where Id_Persona = " + F_Donde.IdPersona.ToString, Conexion)
+        Adaptador.Fill(PersonaDS, "persona_cab")
         If F_Donde.Accion = TipoAccion.Alta Then
-            Registro = PersonaDS.Tables("persona").NewRow()
+            Registro = PersonaDS.Tables("persona_cab").NewRow()
             Registro("ID_PERSONA") = -1
         Else
-            Registro = PersonaDS.Tables("persona").Rows.Item(0)
+            Registro = PersonaDS.Tables("persona_cab").Rows.Item(0)
         End If
 
-        TxtApellido.Text = Registro("APELLIDO").ToString
-        TxtNombre.Text = Registro("NOMBRE").ToString
+        TxtNombre.Text = Registro("PER_NOMBRES").ToString
+        TxtApellido.Text = Registro("PER_APELLIDOS").ToString
         TxtDni.Text = Registro("DNI").ToString
-        TxtTipo.Text = Mid$(Registro("CUIL").ToString(), 1, 2)
-        TxtNumero.Text = Mid$(Registro("CUIL").ToString(), 3, 8)
-        TxtDigitoVerificador.Text = Mid$(Registro("CUIL").ToString(), 11, 1)
+        TxtTipo.Text = Mid$(Registro("PER_CUILT").ToString(), 1, 2)
+        TxtNumero.Text = Mid$(Registro("PER_CUILT").ToString(), 3, 8)
+        TxtDigitoVerificador.Text = Mid$(Registro("PER_CUILT").ToString(), 11, 1)
         CmbSexo.SelectedIndex = IIf(IsDBNull(Registro("SEXO")), -1, Registro("SEXO"))
-        CmbEstadoCivil.SelectedIndex = IIf(IsDBNull(Registro("ESTADOCIVIL")), -1, Registro("ESTADOCIVIL"))
-        DtpFNacimiento.Value = IIf(IsDBNull(Registro("FECHANACIMIENTO")), Date.Now, Registro("FECHANACIMIENTO"))
+        CmbEstadoCivil.SelectedIndex = IIf(IsDBNull(Registro("ESTADO_CIVIL")), -1, Registro("ESTADO_CIVIL"))
+        DtpFNacimiento.Value = IIf(IsDBNull(Registro("F_NACIMIENTO")), Date.Now, Registro("F_NACIMIENTO"))
 
         TxtApellido.Enabled = (F_Donde.Accion <> TipoAccion.Baja)
         TxtApellido.Enabled = (F_Donde.Accion <> TipoAccion.Baja)

@@ -25,30 +25,30 @@ Public Class Persona
         Dim DeleteCmd As New OracleCommand
 
 
-        Registro("APELLIDO") = Apellido
-        Registro("NOMBRE") = Nombre
+        Registro("PER_APELLIDO") = Apellido
+        Registro("PER_NOMBRE") = Nombre
         Registro("DNI") = CInt(Dni.Text)
-        Registro("CUIL") = Tipo.Text + Numero.Text + DigitoVerificador.Text
+        Registro("PER_CUILT") = Tipo.Text + Numero.Text + DigitoVerificador.Text
         Registro("SEXO") = CType(CmbSexoa.SelectedIndex, Sexo)
-        Registro("ESTADOCIVIL") = CType(CmbEstadoCivila.SelectedIndex, EstadoCivil)
-        Registro("FECHANACIMIENTO") = DtpFNacimientoa.Value
+        Registro("ESTADO_CIVIL") = CType(CmbEstadoCivila.SelectedIndex, EstadoCivil)
+        Registro("F_NACIMIENTO") = DtpFNacimientoa.Value
 
         If F_Donde.Accion = TipoAccion.Alta Then
-            PersonaDS.Tables("persona").Rows.Add(Registro)
+            PersonaDS.Tables("persona_cab").Rows.Add(Registro)
         ElseIf F_Donde.Accion = TipoAccion.Baja Then
-            PersonaDS.Tables("persona").Rows.Remove(Registro)
+            PersonaDS.Tables("persona_cab").Rows.Remove(Registro)
         End If
 
-        InsertCmd.CommandText = "Insert Into Persona_CAB " + _
+        InsertCmd.CommandText = "Insert Into Persona_cab " + _
            "VALUES (:idpersona,:apellido,:nombre,:dni,:cuil,:sexo,:estadocivil,:fechanacimiento)"
         UpdateCmd.CommandText = "Update Persona " + _
-            "set Apellido = :apellido," + _
-               " Nombre = :nombre," + _
+            "set Per_Apellido = :apellido," + _
+               " Per_Nombre = :nombre," + _
                " Dni = :dni," + _
-                "CUIL = :cuil," + _
+                "Per_CUILT = :cuil," + _
                 "Sexo = :sexo," + _
-                "EstadoCivil = :estadocivil," + _
-                "FechaNacimiento = :fechanacimiento" + _
+                "Estado_Civil = :estadocivil," + _
+                "F_Nacimiento = :fechanacimiento" + _
             "where Id_Persona = :idpersona"
 
         DeleteCmd.CommandText = "Delete * From Persona Where Id_Persona = :idpersona"
