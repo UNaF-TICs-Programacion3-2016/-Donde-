@@ -87,6 +87,7 @@ Partial Class F_CPersona
         'TxtNumero
         '
         Me.TxtNumero.Location = New System.Drawing.Point(203, 103)
+        Me.TxtNumero.MaxLength = 8
         Me.TxtNumero.Name = "TxtNumero"
         Me.TxtNumero.Size = New System.Drawing.Size(100, 20)
         Me.TxtNumero.TabIndex = 19
@@ -94,6 +95,7 @@ Partial Class F_CPersona
         'TxtDigitoVerificador
         '
         Me.TxtDigitoVerificador.Location = New System.Drawing.Point(309, 103)
+        Me.TxtDigitoVerificador.MaxLength = 1
         Me.TxtDigitoVerificador.Name = "TxtDigitoVerificador"
         Me.TxtDigitoVerificador.Size = New System.Drawing.Size(21, 20)
         Me.TxtDigitoVerificador.TabIndex = 20
@@ -101,6 +103,7 @@ Partial Class F_CPersona
         'TxtTipo
         '
         Me.TxtTipo.Location = New System.Drawing.Point(167, 103)
+        Me.TxtTipo.MaxLength = 2
         Me.TxtTipo.Name = "TxtTipo"
         Me.TxtTipo.Size = New System.Drawing.Size(30, 20)
         Me.TxtTipo.TabIndex = 16
