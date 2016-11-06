@@ -15,6 +15,7 @@ Public Class F_Donde
         IdPersona = -1
         Accion = TipoAccion.Alta
         F_CPersona.Show()
+        Me.Hide()
     End Sub
 
 End Class

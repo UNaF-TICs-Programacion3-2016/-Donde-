@@ -63,7 +63,7 @@ Partial Class F_CPersona
         Me.DtpFNacimiento.Location = New System.Drawing.Point(168, 180)
         Me.DtpFNacimiento.Name = "DtpFNacimiento"
         Me.DtpFNacimiento.Size = New System.Drawing.Size(100, 20)
-        Me.DtpFNacimiento.TabIndex = 23
+        Me.DtpFNacimiento.TabIndex = 20
         '
         'Lbl_EstadoCivil
         '
@@ -78,32 +78,36 @@ Partial Class F_CPersona
         '
         'CmbEstadoCivil
         '
+        Me.CmbEstadoCivil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CmbEstadoCivil.FormattingEnabled = True
         Me.CmbEstadoCivil.Location = New System.Drawing.Point(168, 153)
         Me.CmbEstadoCivil.Name = "CmbEstadoCivil"
         Me.CmbEstadoCivil.Size = New System.Drawing.Size(146, 21)
-        Me.CmbEstadoCivil.TabIndex = 22
+        Me.CmbEstadoCivil.TabIndex = 19
         '
         'TxtNumero
         '
         Me.TxtNumero.Location = New System.Drawing.Point(203, 103)
+        Me.TxtNumero.MaxLength = 8
         Me.TxtNumero.Name = "TxtNumero"
         Me.TxtNumero.Size = New System.Drawing.Size(100, 20)
-        Me.TxtNumero.TabIndex = 19
+        Me.TxtNumero.TabIndex = 16
         '
         'TxtDigitoVerificador
         '
         Me.TxtDigitoVerificador.Location = New System.Drawing.Point(309, 103)
+        Me.TxtDigitoVerificador.MaxLength = 1
         Me.TxtDigitoVerificador.Name = "TxtDigitoVerificador"
         Me.TxtDigitoVerificador.Size = New System.Drawing.Size(21, 20)
-        Me.TxtDigitoVerificador.TabIndex = 20
+        Me.TxtDigitoVerificador.TabIndex = 17
         '
         'TxtTipo
         '
         Me.TxtTipo.Location = New System.Drawing.Point(167, 103)
+        Me.TxtTipo.MaxLength = 2
         Me.TxtTipo.Name = "TxtTipo"
         Me.TxtTipo.Size = New System.Drawing.Size(30, 20)
-        Me.TxtTipo.TabIndex = 16
+        Me.TxtTipo.TabIndex = 15
         '
         'Lbl_Cuil
         '
@@ -122,7 +126,7 @@ Partial Class F_CPersona
         Me.TxtDni.MaxLength = 8
         Me.TxtDni.Name = "TxtDni"
         Me.TxtDni.Size = New System.Drawing.Size(100, 20)
-        Me.TxtDni.TabIndex = 13
+        Me.TxtDni.TabIndex = 14
         '
         'Lbl_Sexo
         '
@@ -153,7 +157,7 @@ Partial Class F_CPersona
         Me.CmbSexo.Location = New System.Drawing.Point(168, 129)
         Me.CmbSexo.Name = "CmbSexo"
         Me.CmbSexo.Size = New System.Drawing.Size(100, 21)
-        Me.CmbSexo.TabIndex = 15
+        Me.CmbSexo.TabIndex = 18
         '
         'Lbl_Apellido
         '
@@ -178,7 +182,7 @@ Partial Class F_CPersona
         Me.TxtNombre.Location = New System.Drawing.Point(167, 46)
         Me.TxtNombre.Name = "TxtNombre"
         Me.TxtNombre.Size = New System.Drawing.Size(338, 20)
-        Me.TxtNombre.TabIndex = 28
+        Me.TxtNombre.TabIndex = 13
         '
         'Lbl_Nombre
         '
