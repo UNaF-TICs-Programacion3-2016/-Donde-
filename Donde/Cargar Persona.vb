@@ -65,13 +65,13 @@ Public Class F_CPersona
         Dim UpdateCmd As New OracleCommand
         Dim DeleteCmd As New OracleCommand
 
-        Registro("PER_NOMBRE") = TxtNombre.Text
-        Registro("PER_APELLIDO") = TxtApellido.Text
+        Registro("PER_NOMBRES") = TxtNombre.Text
+        Registro("PER_APELLIDOS") = TxtApellido.Text
         Registro("DNI") = CInt(TxtDni.Text)
-        Registro("CUIL") = TxtTipo.Text + TxtNumero.Text + TxtDigitoVerificador.Text
+        Registro("PER_CUILT") = TxtTipo.Text + TxtNumero.Text + TxtDigitoVerificador.Text
         Registro("SEXO") = CType(CmbSexo.SelectedIndex, Sexo)
-        Registro("ESTADOCIVIL") = CType(CmbEstadoCivil.SelectedIndex, EstadoCivil)
-        Registro("FECHANACIMIENTO") = DtpFNacimiento.Value
+        Registro("ESTADO_CIVIL") = CType(CmbEstadoCivil.SelectedIndex, EstadoCivil)
+        Registro("F_NACIMIENTO") = DtpFNacimiento.Value
 
         If F_Donde.Accion = TipoAccion.Alta Then
             PersonaDS.Tables("persona_cab").Rows.Add(Registro)
@@ -80,49 +80,49 @@ Public Class F_CPersona
         End If
 
         InsertCmd.CommandText = "Insert Into Persona_cab " + _
-           "VALUES (:idpersona,:apellido,:nombre,:dni,:cuil,:sexo,:estadocivil,:fechanacimiento)"
+           "VALUES (:id_persona,:apellido,:nombre,:dni,:cuil,:sexo,:estadocivil,:fechanacimiento)"
         UpdateCmd.CommandText = "Update Persona " + _
-            "set Per_Apellido = :apellido," + _
-               " Per_Nombre = :nombre," + _
+            "set Per_Nombre = :nombre," + _
+               " Per_Apellido = :apellido," + _
                " Dni = :dni," + _
                 "Per_CUILT = :cuil," + _
                 "Sexo = :sexo," + _
                 "Estado_Civil = :estadocivil," + _
                 "F_Nacimiento = :fechanacimiento" + _
-            "where Id_Persona = :idpersona"
+            "where Id_Persona = :id_persona"
 
-        DeleteCmd.CommandText = "Delete * From Persona Where Id_Persona = :idpersona"
+        DeleteCmd.CommandText = "Delete * From Persona_cab Where Id_Persona = :id_persona"
 
         InsertCmd.Connection = Conexion
         UpdateCmd.Connection = Conexion
         DeleteCmd.Connection = Conexion
 
-        InsertCmd.Parameters.Add(New OracleParameter(":idpersona", OracleDbType.Int32, 0, "ID_PERSONA"))
-        InsertCmd.Parameters.Add(New OracleParameter(":apellido", OracleDbType.Varchar2, 0, "APELLIDO"))
-        InsertCmd.Parameters.Add(New OracleParameter(":nombre", OracleDbType.Varchar2, 0, "NOMBRE"))
-        'InsertCmd.Parameters.Add(New OracleParameter(":sexo", OracleDbType.Byte, 0, "SEXO"))
-        'InsertCmd.Parameters.Add(New OracleParameter(":dni", OracleDbType.Varchar2, 0, "DNI"))
-        'InsertCmd.Parameters.Add(New OracleParameter(":cuil", OracleDbType.Varchar2, 0, "CUIL"))
-        'InsertCmd.Parameters.Add(New OracleParameter(":fechanacimiento", OracleDbType.Date, 0, "FECHANACIMIENTO"))
-        'InsertCmd.Parameters.Add(New OracleParameter(":estadocivil", OracleDbType.Byte, 0, "ESTADOCIVIL"))
+        InsertCmd.Parameters.Add(New OracleParameter(":id_persona", OracleDbType.Int32, 0, "ID_PERSONA"))
+        InsertCmd.Parameters.Add(New OracleParameter(":nombre", OracleDbType.Varchar2, 0, "PER_NOMBRES"))
+        InsertCmd.Parameters.Add(New OracleParameter(":apellido", OracleDbType.Varchar2, 0, "PER_APELLIDOS"))
+        InsertCmd.Parameters.Add(New OracleParameter(":dni", OracleDbType.Varchar2, 0, "DNI"))
+        InsertCmd.Parameters.Add(New OracleParameter(":cuil", OracleDbType.Varchar2, 0, "PER_CUILT"))
+        InsertCmd.Parameters.Add(New OracleParameter(":sexo", OracleDbType.Byte, 0, "SEXO"))
+        InsertCmd.Parameters.Add(New OracleParameter(":estadocivil", OracleDbType.Byte, 0, "ESTADO_CIVIL"))
+        InsertCmd.Parameters.Add(New OracleParameter(":fechanacimiento", OracleDbType.Date, 0, "F_NACIMIENTO"))
 
-        UpdateCmd.Parameters.Add(New OracleParameter(":idpersona", OracleDbType.Int32, 0, "ID_PERSONA"))
-        UpdateCmd.Parameters.Add(New OracleParameter(":apellido", OracleDbType.Varchar2, 0, "APELLIDO"))
-        UpdateCmd.Parameters.Add(New OracleParameter(":nombre", OracleDbType.Varchar2, 0, "NOMBRE"))
-        'UpdateCmd.Parameters.Add(New OracleParameter(":dni", OracleDbType.Varchar2, 8, "DNI"))
-        'UpdateCmd.Parameters.Add(New OracleParameter(":cuil", OracleDbType.Varchar2, 13, "CUIL"))
-        'UpdateCmd.Parameters.Add(New OracleParameter(":sexo", OracleDbType.Byte, 0, "SEXO"))
-        'UpdateCmd.Parameters.Add(New OracleParameter(":estadocivil", OracleDbType.Byte, 0, "ESTADOCIVIL"))
-        'UpdateCmd.Parameters.Add(New OracleParameter(":fechanacimiento", OracleDbType.Date, 0, "FECHANACIMIENTO"))
+        UpdateCmd.Parameters.Add(New OracleParameter(":id_persona", OracleDbType.Int32, 0, "ID_PERSONA"))
+        UpdateCmd.Parameters.Add(New OracleParameter(":nombre", OracleDbType.Varchar2, 0, "PER_NOMBRE"))
+        UpdateCmd.Parameters.Add(New OracleParameter(":apellido", OracleDbType.Varchar2, 0, "PER_APELLIDO"))
+        UpdateCmd.Parameters.Add(New OracleParameter(":dni", OracleDbType.Varchar2, 8, "DNI"))
+        UpdateCmd.Parameters.Add(New OracleParameter(":cuil", OracleDbType.Varchar2, 13, "PER_CUILT"))
+        UpdateCmd.Parameters.Add(New OracleParameter(":sexo", OracleDbType.Byte, 0, "SEXO"))
+        UpdateCmd.Parameters.Add(New OracleParameter(":estadocivil", OracleDbType.Byte, 0, "ESTADO_CIVIL"))
+        UpdateCmd.Parameters.Add(New OracleParameter(":fechanacimiento", OracleDbType.Date, 0, "F_NACIMIENTO"))
 
 
-        DeleteCmd.Parameters.Add(New OracleParameter(":idpersona", OracleDbType.Int32, 0, "ID_PERSONA"))
+        DeleteCmd.Parameters.Add(New OracleParameter(":id_persona", OracleDbType.Int32, 0, "ID_PERSONA"))
 
         Adaptador.InsertCommand = InsertCmd
         Adaptador.UpdateCommand = UpdateCmd
         Adaptador.DeleteCommand = DeleteCmd
         Try
-            Adaptador.Update(PersonaDS, "persona")
+            Adaptador.Update(PersonaDS, "persona_cab")
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
