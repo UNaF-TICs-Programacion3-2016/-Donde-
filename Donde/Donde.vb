@@ -14,6 +14,7 @@ Public Class F_Donde
     Private Sub Cargar_Persona(sender As Object, e As EventArgs) Handles Btn_AP.Click ' Llama al formolario para realizar la carga de los datos de una perosna a la Base de Datos
         IdPersona = -1
         Accion = TipoAccion.Alta
+        Me.Hide()
         F_CPersona.Show()
     End Sub
 

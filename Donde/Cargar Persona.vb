@@ -40,10 +40,14 @@ Public Class F_CPersona
             .CargarFecha = DtpFNacimiento
             .AgregarPersona()
         End With
-
+        Me.Close()
     End Sub
 
     Private Sub TxtDni_TextChanged(sender As Object, e As EventArgs) Handles TxtDni.TextChanged
 
+    End Sub
+
+    Private Sub Cancelar_Click(sender As Object, e As EventArgs) Handles Cancelar.Click
+        Me.Close()
     End Sub
 End Class

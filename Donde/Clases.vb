@@ -51,6 +51,83 @@ Public Class Persona
         CmbSexoa.Enabled = (F_Donde.Accion <> TipoAccion.Baja)
         CmbEstadoCivila.Enabled = (F_Donde.Accion <> TipoAccion.Baja)
     End Sub
+    'Carga Los datos para pasarlos a la BD
+    Public Sub AgregarPersona()
+
+        Dim InsertCmd As New OracleCommand
+        Dim UpdateCmd As New OracleCommand
+        Dim DeleteCmd As New OracleCommand
+
+        Registro("PER_NOMBRES") = Nombre.Text
+        Registro("PER_APELLIDOS") = Apellido.Text
+        Registro("DNI") = Dni.Text
+        Registro("PER_CUILT") = Tipo.Text + Numero.Text + DigitoVerificador.Text
+        Registro("SEXO") = CType(CmbSexoa.SelectedIndex, Sexo)
+        Registro("ESTADO_CIVIL") = CType(CmbEstadoCivila.SelectedIndex, EstadoCivil)
+        Registro("F_NACIMIENTO") = DtpFNacimientoa.Value
+
+        If F_Donde.Accion = TipoAccion.Alta Then
+            PersonaDS.Tables("persona_cab").Rows.Add(Registro)
+        ElseIf F_Donde.Accion = TipoAccion.Baja Then
+            PersonaDS.Tables("persona_cab").Rows.Remove(Registro)
+        End If
+
+        InsertCmd.CommandText = "Insert Into Persona_cab " +
+           "VALUES (:id_persona,:apellido,:nombre,:dni,:cuil,:sexo,:estadocivil,:fechanacimiento)"
+        UpdateCmd.CommandText = "Update Persona " +
+            "set Per_Nombre = :nombre," +
+               " Per_Apellido = :apellido," +
+               " Dni = :dni," +
+                "Per_CUILT = :cuil," +
+                "Sexo = :sexo," +
+                "Estado_Civil = :estadocivil," +
+                "F_Nacimiento = :fechanacimiento" +
+            "where Id_Persona = :id_persona"
+
+        DeleteCmd.CommandText = "Delete * From Persona_cab Where Id_Persona = :id_persona"
+
+        InsertCmd.Connection = Conexion
+        UpdateCmd.Connection = Conexion
+        DeleteCmd.Connection = Conexion
+
+        InsertCmd.Parameters.Add(New OracleParameter(":id_persona", OracleDbType.Int32, 0, "ID_PERSONA"))
+        InsertCmd.Parameters.Add(New OracleParameter(":nombre", OracleDbType.Varchar2, 0, "PER_NOMBRES"))
+        InsertCmd.Parameters.Add(New OracleParameter(":apellido", OracleDbType.Varchar2, 0, "PER_APELLIDOS"))
+        InsertCmd.Parameters.Add(New OracleParameter(":dni", OracleDbType.Varchar2, 0, "DNI"))
+        InsertCmd.Parameters.Add(New OracleParameter(":cuil", OracleDbType.Varchar2, 0, "PER_CUILT"))
+        InsertCmd.Parameters.Add(New OracleParameter(":sexo", OracleDbType.Byte, 0, "SEXO"))
+        InsertCmd.Parameters.Add(New OracleParameter(":estadocivil", OracleDbType.Byte, 0, "ESTADO_CIVIL"))
+        InsertCmd.Parameters.Add(New OracleParameter(":fechanacimiento", OracleDbType.Date, 0, "F_NACIMIENTO"))
+
+        UpdateCmd.Parameters.Add(New OracleParameter(":id_persona", OracleDbType.Int32, 0, "ID_PERSONA"))
+        UpdateCmd.Parameters.Add(New OracleParameter(":nombre", OracleDbType.Varchar2, 0, "PER_NOMBRE"))
+        UpdateCmd.Parameters.Add(New OracleParameter(":apellido", OracleDbType.Varchar2, 0, "PER_APELLIDO"))
+        UpdateCmd.Parameters.Add(New OracleParameter(":dni", OracleDbType.Varchar2, 8, "DNI"))
+        UpdateCmd.Parameters.Add(New OracleParameter(":cuil", OracleDbType.Varchar2, 13, "PER_CUILT"))
+        UpdateCmd.Parameters.Add(New OracleParameter(":sexo", OracleDbType.Byte, 0, "SEXO"))
+        UpdateCmd.Parameters.Add(New OracleParameter(":estadocivil", OracleDbType.Byte, 0, "ESTADO_CIVIL"))
+        UpdateCmd.Parameters.Add(New OracleParameter(":fechanacimiento", OracleDbType.Date, 0, "F_NACIMIENTO"))
+
+
+        DeleteCmd.Parameters.Add(New OracleParameter(":id_persona", OracleDbType.Int32, 0, "ID_PERSONA"))
+
+        Adaptador.InsertCommand = InsertCmd
+        Adaptador.UpdateCommand = UpdateCmd
+        Adaptador.DeleteCommand = DeleteCmd
+        Try
+            Adaptador.Update(PersonaDS, "persona_cab")
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+        If F_Donde.Accion = TipoAccion.Alta Then
+            MessageBox.Show("Los datos se guardaron correctamente.")
+        ElseIf F_Donde.Accion = TipoAccion.Modificacion Then
+            MessageBox.Show("Los datos se actualizaron correctamente.")
+        Else
+            MessageBox.Show("El registro se eliminó correctamente.")
+        End If
+    End Sub
     Public Property CargarNombre() As TextBox
         Get
             Return Nombre
@@ -123,84 +200,6 @@ Public Class Persona
             DtpFNacimientoa = value
         End Set
     End Property
-    'Carga Los datos para pasarlos a la BD
-    Public Sub AgregarPersona()
-
-        Dim InsertCmd As New OracleCommand
-        Dim UpdateCmd As New OracleCommand
-        Dim DeleteCmd As New OracleCommand
-
-        Registro("PER_NOMBRES") = Nombre.Text
-        Registro("PER_APELLIDOS") = Apellido.Text
-        Registro("DNI") = Dni.Text
-        Registro("PER_CUILT") = Tipo.Text + Numero.Text + DigitoVerificador.Text
-        Registro("SEXO") = CType(CmbSexoa.SelectedIndex, Sexo)
-        Registro("ESTADO_CIVIL") = CType(CmbEstadoCivila.SelectedIndex, EstadoCivil)
-        Registro("F_NACIMIENTO") = DtpFNacimientoa.Value
-
-        If F_Donde.Accion = TipoAccion.Alta Then
-            PersonaDS.Tables("persona_cab").Rows.Add(Registro)
-        ElseIf F_Donde.Accion = TipoAccion.Baja Then
-            PersonaDS.Tables("persona_cab").Rows.Remove(Registro)
-        End If
-
-        InsertCmd.CommandText = "Insert Into Persona_cab " +
-           "VALUES (:id_persona,:apellido,:nombre,:dni,:cuil,:sexo,:estadocivil,:fechanacimiento)"
-        UpdateCmd.CommandText = "Update Persona " +
-            "set Per_Nombre = :nombre," +
-               " Per_Apellido = :apellido," +
-               " Dni = :dni," +
-                "Per_CUILT = :cuil," +
-                "Sexo = :sexo," +
-                "Estado_Civil = :estadocivil," +
-                "F_Nacimiento = :fechanacimiento" +
-            "where Id_Persona = :id_persona"
-
-        DeleteCmd.CommandText = "Delete * From Persona_cab Where Id_Persona = :id_persona"
-
-        InsertCmd.Connection = Conexion
-        UpdateCmd.Connection = Conexion
-        DeleteCmd.Connection = Conexion
-
-        InsertCmd.Parameters.Add(New OracleParameter(":id_persona", OracleDbType.Int32, 0, "ID_PERSONA"))
-        InsertCmd.Parameters.Add(New OracleParameter(":nombre", OracleDbType.Varchar2, 0, "PER_NOMBRES"))
-        InsertCmd.Parameters.Add(New OracleParameter(":apellido", OracleDbType.Varchar2, 0, "PER_APELLIDOS"))
-        InsertCmd.Parameters.Add(New OracleParameter(":dni", OracleDbType.Varchar2, 0, "DNI"))
-        InsertCmd.Parameters.Add(New OracleParameter(":cuil", OracleDbType.Varchar2, 0, "PER_CUILT"))
-        InsertCmd.Parameters.Add(New OracleParameter(":sexo", OracleDbType.Byte, 0, "SEXO"))
-        InsertCmd.Parameters.Add(New OracleParameter(":estadocivil", OracleDbType.Byte, 0, "ESTADO_CIVIL"))
-        InsertCmd.Parameters.Add(New OracleParameter(":fechanacimiento", OracleDbType.Date, 0, "F_NACIMIENTO"))
-
-        UpdateCmd.Parameters.Add(New OracleParameter(":id_persona", OracleDbType.Int32, 0, "ID_PERSONA"))
-        UpdateCmd.Parameters.Add(New OracleParameter(":nombre", OracleDbType.Varchar2, 0, "PER_NOMBRE"))
-        UpdateCmd.Parameters.Add(New OracleParameter(":apellido", OracleDbType.Varchar2, 0, "PER_APELLIDO"))
-        UpdateCmd.Parameters.Add(New OracleParameter(":dni", OracleDbType.Varchar2, 8, "DNI"))
-        UpdateCmd.Parameters.Add(New OracleParameter(":cuil", OracleDbType.Varchar2, 13, "PER_CUILT"))
-        UpdateCmd.Parameters.Add(New OracleParameter(":sexo", OracleDbType.Byte, 0, "SEXO"))
-        UpdateCmd.Parameters.Add(New OracleParameter(":estadocivil", OracleDbType.Byte, 0, "ESTADO_CIVIL"))
-        UpdateCmd.Parameters.Add(New OracleParameter(":fechanacimiento", OracleDbType.Date, 0, "F_NACIMIENTO"))
-
-
-        DeleteCmd.Parameters.Add(New OracleParameter(":id_persona", OracleDbType.Int32, 0, "ID_PERSONA"))
-
-        Adaptador.InsertCommand = InsertCmd
-        Adaptador.UpdateCommand = UpdateCmd
-        Adaptador.DeleteCommand = DeleteCmd
-        Try
-            Adaptador.Update(PersonaDS, "persona_cab")
-        Catch ex As Exception
-            MsgBox(ex.Message)
-            Exit Sub
-        End Try
-
-        If F_Donde.Accion = TipoAccion.Alta Then
-            MessageBox.Show("Los datos se guardaron correctamente.")
-        ElseIf F_Donde.Accion = TipoAccion.Modificacion Then
-            MessageBox.Show("Los datos se actualizaron correctamente.")
-        Else
-            MessageBox.Show("El registro se eliminó correctamente.")
-        End If
-    End Sub
 End Class
 
 Public Class Sitios
