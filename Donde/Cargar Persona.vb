@@ -3,6 +3,8 @@
 Public Enum EstadoCivil As Byte
     Soltero = 0
     Casado = 1
+    Separado = 2
+    Viudo = 3
 End Enum
 
 Public Enum Sexo As Byte
@@ -10,7 +12,11 @@ Public Enum Sexo As Byte
     Masculino = 1
 End Enum
 
+
+
 Public Class F_CPersona
+
+    Public OPersona As New Persona
 
     Public Conexion As New OracleConnection("Data Source=localhost;User Id=Dorian;Password=123456789;")
 
@@ -19,13 +25,8 @@ Public Class F_CPersona
     Dim Registro As DataRow
 
     Private Sub F_CPersona_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Cargo Combo Sexo
-        CmbSexo.Items.Insert(Sexo.Femenino, Sexo.Femenino.ToString)
-        CmbSexo.Items.Insert(Sexo.Masculino, Sexo.Masculino.ToString)
 
-        'Cargo Combo Estado Civil
-        CmbEstadoCivil.Items.Insert(EstadoCivil.Soltero, EstadoCivil.Soltero.ToString)
-        CmbEstadoCivil.Items.Insert(EstadoCivil.Casado, EstadoCivil.Casado.ToString)
+        OPersona.CargaCmbox(CmbSexo, CmbEstadoCivil)
 
         Adaptador = New OracleDataAdapter("Select * From Persona_cab Where Id_Persona = " + F_Donde.IdPersona.ToString, Conexion)
         Adaptador.Fill(PersonaDS, "persona_cab")

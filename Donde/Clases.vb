@@ -4,8 +4,6 @@
 
 Public Class Persona
 
-
-
     Private Nombre, Apellido, Dni, Tipo, Numero, DigitoVerificador As TextBox
     Private CmbSexoa, CmbEstadoCivila As ComboBox
     Private DtpFNacimientoa As DateTimePicker
@@ -98,6 +96,19 @@ Public Class Persona
         'Me.Close()
 
 
+
+    End Sub
+
+    Public Sub CargaCmbox(ByRef CmbSexop As ComboBox, ByRef CmbECivil As ComboBox)
+        'Cargo Combo Sexo
+        CmbSexop.Items.Insert(Sexo.Femenino, Sexo.Femenino.ToString)
+        CmbSexop.Items.Insert(Sexo.Masculino, Sexo.Masculino.ToString)
+
+        'Cargo Combo Estado Civil
+        CmbECivil.Items.Insert(EstadoCivil.Soltero, EstadoCivil.Soltero.ToString)
+        CmbECivil.Items.Insert(EstadoCivil.Casado, EstadoCivil.Casado.ToString)
+        CmbECivil.Items.Insert(EstadoCivil.Separado, EstadoCivil.Separado.ToString)
+        CmbECivil.Items.Insert(EstadoCivil.Viudo, EstadoCivil.Viudo.ToString)
 
     End Sub
 

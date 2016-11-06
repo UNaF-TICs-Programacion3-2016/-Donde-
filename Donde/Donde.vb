@@ -4,8 +4,6 @@ Public Enum TipoAccion As Byte 'Enumeracion para selecionar el tipo de accion a 
     Modificacion = 2
     Baja = 3
 End Enum
-
-
 Public Class F_Donde
 
     Friend Accion As TipoAccion
