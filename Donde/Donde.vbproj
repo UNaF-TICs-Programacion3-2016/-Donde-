@@ -117,6 +117,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cargar Rubros.Designer.vb">
+      <DependentUpon>Cargar Rubros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cargar Rubros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cargar Sitio.designer.vb">
+      <DependentUpon>Cargar Sitio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cargar Sitio.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Clases.vb" />
     <Compile Include="Donde.vb">
       <SubType>Form</SubType>
@@ -148,6 +160,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Cargar Rubros.resx">
+      <DependentUpon>Cargar Rubros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cargar Sitio.resx">
+      <DependentUpon>Cargar Sitio.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Donde.resx">
       <DependentUpon>Donde.vb</DependentUpon>
     </EmbeddedResource>

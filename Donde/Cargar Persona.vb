@@ -1,19 +1,5 @@
 ﻿
 
-Public Enum EstadoCivil As Byte 'Enumeracion para selecionar el tipo de Estado Civil
-    Soltero = 0
-    Casado = 1
-    Separado = 2
-    Viudo = 3
-End Enum
-
-Public Enum Sexo As Byte 'Enumeracion para selecionar el tipo de Sexo
-    Femenino = 0
-    Masculino = 1
-End Enum
-
-
-
 Public Class F_CPersona
 
     Public OPersona As New Persona 'Instancia de la Clase Persona 
@@ -44,7 +30,7 @@ Public Class F_CPersona
 
     End Sub
 
-    Private Sub AceptarCmd_Click(sender As Object, e As EventArgs) Handles AceptarCmd.Click
+    Private Sub BtnAPersona_Click(sender As Object, e As EventArgs) Handles BtnAPersona.Click
 
         '"With": Ejecuta una serie de acciones que hacen referencia a un unico objeto
 
@@ -65,7 +51,8 @@ Public Class F_CPersona
         'F_Donde.Show()
     End Sub
 
-    Private Sub Cancelar_Click(sender As Object, e As EventArgs) Handles Cancelar.Click
+    Private Sub BtnCPersona_Click(sender As Object, e As EventArgs) Handles BtnCPersona.Click
         Me.Close()
+        F_Donde.Show()
     End Sub
 End Class

@@ -34,6 +34,7 @@ Partial Class F_Donde
         Me.Btn_AS = New System.Windows.Forms.Button()
         Me.DGV_Persona = New System.Windows.Forms.DataGridView()
         Me.DGV_Sitio = New System.Windows.Forms.DataGridView()
+        Me.BtnDSalir = New System.Windows.Forms.Button()
         Me.GB_Persona.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DGV_Persona, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -145,7 +146,7 @@ Partial Class F_Donde
         Me.DGV_Persona.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGV_Persona.Location = New System.Drawing.Point(128, 24)
         Me.DGV_Persona.Name = "DGV_Persona"
-        Me.DGV_Persona.Size = New System.Drawing.Size(439, 204)
+        Me.DGV_Persona.Size = New System.Drawing.Size(439, 185)
         Me.DGV_Persona.TabIndex = 3
         '
         'DGV_Sitio
@@ -153,14 +154,24 @@ Partial Class F_Donde
         Me.DGV_Sitio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGV_Sitio.Location = New System.Drawing.Point(128, 248)
         Me.DGV_Sitio.Name = "DGV_Sitio"
-        Me.DGV_Sitio.Size = New System.Drawing.Size(439, 204)
+        Me.DGV_Sitio.Size = New System.Drawing.Size(439, 185)
         Me.DGV_Sitio.TabIndex = 4
+        '
+        'BtnDSalir
+        '
+        Me.BtnDSalir.Location = New System.Drawing.Point(490, 449)
+        Me.BtnDSalir.Name = "BtnDSalir"
+        Me.BtnDSalir.Size = New System.Drawing.Size(77, 24)
+        Me.BtnDSalir.TabIndex = 4
+        Me.BtnDSalir.Text = "Salir "
+        Me.BtnDSalir.UseVisualStyleBackColor = True
         '
         'F_Donde
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(579, 485)
+        Me.Controls.Add(Me.BtnDSalir)
         Me.Controls.Add(Me.DGV_Sitio)
         Me.Controls.Add(Me.DGV_Persona)
         Me.Controls.Add(Me.GroupBox1)
@@ -186,5 +197,6 @@ Partial Class F_Donde
     Friend WithEvents Btn_AS As System.Windows.Forms.Button
     Friend WithEvents DGV_Persona As System.Windows.Forms.DataGridView
     Friend WithEvents DGV_Sitio As System.Windows.Forms.DataGridView
+    Friend WithEvents BtnDSalir As System.Windows.Forms.Button
 
 End Class

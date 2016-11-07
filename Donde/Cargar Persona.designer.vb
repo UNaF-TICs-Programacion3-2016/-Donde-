@@ -39,8 +39,8 @@ Partial Class F_CPersona
         Me.TxtNombre = New System.Windows.Forms.TextBox()
         Me.Lbl_Nombre = New System.Windows.Forms.Label()
         Me.GB_CPD = New System.Windows.Forms.GroupBox()
-        Me.AceptarCmd = New System.Windows.Forms.Button()
-        Me.Cancelar = New System.Windows.Forms.Button()
+        Me.BtnAPersona = New System.Windows.Forms.Button()
+        Me.BtnCPersona = New System.Windows.Forms.Button()
         Me.GB_CPBtn = New System.Windows.Forms.GroupBox()
         Me.GB_CPD.SuspendLayout()
         Me.GB_CPBtn.SuspendLayout()
@@ -164,7 +164,7 @@ Partial Class F_CPersona
         Me.Lbl_Apellido.AutoSize = True
         Me.Lbl_Apellido.BackColor = System.Drawing.Color.LightSteelBlue
         Me.Lbl_Apellido.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lbl_Apellido.Location = New System.Drawing.Point(98, 23)
+        Me.Lbl_Apellido.Location = New System.Drawing.Point(98, 51)
         Me.Lbl_Apellido.Name = "Lbl_Apellido"
         Me.Lbl_Apellido.Size = New System.Drawing.Size(64, 13)
         Me.Lbl_Apellido.TabIndex = 14
@@ -172,24 +172,24 @@ Partial Class F_CPersona
         '
         'TxtApellido
         '
-        Me.TxtApellido.Location = New System.Drawing.Point(167, 20)
+        Me.TxtApellido.Location = New System.Drawing.Point(168, 48)
         Me.TxtApellido.Name = "TxtApellido"
         Me.TxtApellido.Size = New System.Drawing.Size(338, 20)
-        Me.TxtApellido.TabIndex = 12
+        Me.TxtApellido.TabIndex = 13
         '
         'TxtNombre
         '
-        Me.TxtNombre.Location = New System.Drawing.Point(167, 46)
+        Me.TxtNombre.Location = New System.Drawing.Point(167, 20)
         Me.TxtNombre.Name = "TxtNombre"
         Me.TxtNombre.Size = New System.Drawing.Size(338, 20)
-        Me.TxtNombre.TabIndex = 13
+        Me.TxtNombre.TabIndex = 12
         '
         'Lbl_Nombre
         '
         Me.Lbl_Nombre.AutoSize = True
         Me.Lbl_Nombre.BackColor = System.Drawing.Color.LightSteelBlue
         Me.Lbl_Nombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lbl_Nombre.Location = New System.Drawing.Point(96, 49)
+        Me.Lbl_Nombre.Location = New System.Drawing.Point(96, 23)
         Me.Lbl_Nombre.Name = "Lbl_Nombre"
         Me.Lbl_Nombre.Size = New System.Drawing.Size(66, 13)
         Me.Lbl_Nombre.TabIndex = 29
@@ -221,29 +221,29 @@ Partial Class F_CPersona
         Me.GB_CPD.TabStop = False
         Me.GB_CPD.Text = "Carga de Datos"
         '
-        'AceptarCmd
+        'BtnAPersona
         '
-        Me.AceptarCmd.Location = New System.Drawing.Point(409, 19)
-        Me.AceptarCmd.Name = "AceptarCmd"
-        Me.AceptarCmd.Size = New System.Drawing.Size(96, 26)
-        Me.AceptarCmd.TabIndex = 26
-        Me.AceptarCmd.Text = "Aceptar"
-        Me.AceptarCmd.UseVisualStyleBackColor = True
+        Me.BtnAPersona.Location = New System.Drawing.Point(409, 19)
+        Me.BtnAPersona.Name = "BtnAPersona"
+        Me.BtnAPersona.Size = New System.Drawing.Size(96, 26)
+        Me.BtnAPersona.TabIndex = 26
+        Me.BtnAPersona.Text = "Aceptar"
+        Me.BtnAPersona.UseVisualStyleBackColor = True
         '
-        'Cancelar
+        'BtnCPersona
         '
-        Me.Cancelar.Location = New System.Drawing.Point(227, 20)
-        Me.Cancelar.Name = "Cancelar"
-        Me.Cancelar.Size = New System.Drawing.Size(104, 25)
-        Me.Cancelar.TabIndex = 27
-        Me.Cancelar.Text = "Cancelar"
-        Me.Cancelar.UseVisualStyleBackColor = True
+        Me.BtnCPersona.Location = New System.Drawing.Point(227, 20)
+        Me.BtnCPersona.Name = "BtnCPersona"
+        Me.BtnCPersona.Size = New System.Drawing.Size(104, 25)
+        Me.BtnCPersona.TabIndex = 27
+        Me.BtnCPersona.Text = "Cancelar"
+        Me.BtnCPersona.UseVisualStyleBackColor = True
         '
         'GB_CPBtn
         '
         Me.GB_CPBtn.BackColor = System.Drawing.Color.LightSlateGray
-        Me.GB_CPBtn.Controls.Add(Me.AceptarCmd)
-        Me.GB_CPBtn.Controls.Add(Me.Cancelar)
+        Me.GB_CPBtn.Controls.Add(Me.BtnAPersona)
+        Me.GB_CPBtn.Controls.Add(Me.BtnCPersona)
         Me.GB_CPBtn.Location = New System.Drawing.Point(12, 239)
         Me.GB_CPBtn.Name = "GB_CPBtn"
         Me.GB_CPBtn.Size = New System.Drawing.Size(536, 61)
@@ -283,7 +283,7 @@ Partial Class F_CPersona
     Friend WithEvents TxtNombre As System.Windows.Forms.TextBox
     Friend WithEvents Lbl_Nombre As System.Windows.Forms.Label
     Friend WithEvents GB_CPD As System.Windows.Forms.GroupBox
-    Friend WithEvents AceptarCmd As System.Windows.Forms.Button
-    Friend WithEvents Cancelar As System.Windows.Forms.Button
+    Friend WithEvents BtnAPersona As System.Windows.Forms.Button
+    Friend WithEvents BtnCPersona As System.Windows.Forms.Button
     Friend WithEvents GB_CPBtn As System.Windows.Forms.GroupBox
 End Class
