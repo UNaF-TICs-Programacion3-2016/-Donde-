@@ -78,6 +78,7 @@ Partial Class F_CPersona
         '
         'CmbEstadoCivil
         '
+        Me.CmbEstadoCivil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CmbEstadoCivil.FormattingEnabled = True
         Me.CmbEstadoCivil.Location = New System.Drawing.Point(168, 153)
         Me.CmbEstadoCivil.Name = "CmbEstadoCivil"

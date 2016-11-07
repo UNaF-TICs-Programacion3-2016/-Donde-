@@ -128,6 +128,35 @@ Public Class Persona
             MessageBox.Show("El registro se eliminó correctamente.")
         End If
     End Sub
+    Public Shared Function ValidarCuil(pTipo As TextBox, pNumero As TextBox, pDigitoVerifivador As TextBox) As Boolean
+        Dim CUILStr As String
+        Dim Suma As Double
+        Dim Resto As Double
+        CUILStr = pTipo.Text + "" + pNumero.Text + "" + pDigitoVerifivador.Text
+
+        Suma = (Mid(CUILStr, 1, 1) * 5) +
+            (Mid(CUILStr, 2, 1) * 4) +
+            (Mid(CUILStr, 3, 1) * 3) +
+            (Mid(CUILStr, 4, 1) * 2) +
+            (Mid(CUILStr, 5, 1) * 7) +
+            (Mid(CUILStr, 6, 1) * 6) +
+            (Mid(CUILStr, 7, 1) * 5) +
+            (Mid(CUILStr, 8, 1) * 4) +
+            (Mid(CUILStr, 9, 1) * 3) +
+            (Mid(CUILStr, 10, 1) * 2)
+
+        Resto = Suma Mod 11
+
+        If Resto = 0 And Mid(CUILStr, 11, 1) = 0 Then
+            Return True
+        ElseIf Resto = 1 And Mid(CUILStr, 11, 1) = 0 Then
+            Return False
+        ElseIf Mid(CUILStr, 11, 1) = (11 - Resto) Then
+            Return True
+        End If
+        Return False
+
+    End Function
     Public Property CargarNombre() As TextBox
         Get
             Return Nombre

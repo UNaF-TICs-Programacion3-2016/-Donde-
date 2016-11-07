@@ -38,15 +38,39 @@ Public Class F_CPersona
             .CargarSexo = CmbSexo
             .CargarEstadoCivil = CmbEstadoCivil
             .CargarFecha = DtpFNacimiento
-            .AgregarPersona()
         End With
-        Me.Close()
+        'Verifica si todos los datos son ingresados
+        If ValidacionesDeTextBoxs() = False Then
+            MsgBox("Complete los Campos Restantes")
+            Exit Sub
+        End If
+        'Verifica si el CUIL ingresado es correcto
+        If Persona.ValidarCuil(TxtTipo, TxtNumero, TxtDigitoVerificador) = True Then
+            MsgBox("El CUIL es Valido")
+        Else
+            MsgBox("El CUIL NO es Valido")
+            oPersona.CargarTabla()
+            Exit Sub
+        End If
+        'Agrega una persona a la tabla
+        oPersona.AgregarPersona()
+        'Vuelve a cargar la tabla para una nueva persona
+        oPersona.CargarTabla()
+        'Me.Close()
     End Sub
-
-    Private Sub TxtDni_TextChanged(sender As Object, e As EventArgs) Handles TxtDni.TextChanged
-
-    End Sub
-
+    'Validacion para cada textboxs'''''Si uno de los textboxs no contiene datos no guardara los datos
+    Public Function ValidacionesDeTextBoxs() As Boolean
+        If TxtApellido.Text = "" And + _
+            TxtNombre.Text = "" And + _
+            TxtDni.Text = "" And + _
+            TxtTipo.Text = "" And + _
+            TxtNumero.Text = "" And + _
+            TxtDigitoVerificador.Text = "" Then
+            Return False
+        Else
+            Return True
+        End If
+    End Function
     Private Sub Cancelar_Click(sender As Object, e As EventArgs) Handles Cancelar.Click
         Me.Close()
     End Sub
