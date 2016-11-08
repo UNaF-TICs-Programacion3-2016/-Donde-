@@ -1,4 +1,15 @@
 ﻿Imports Oracle.DataAccess.Client ' Sentencia para importar la clase OracleDataAcces
+Public Enum EstadoCivil As Byte
+    Soltero = 0
+    Casado = 1
+    Separado = 2
+    Viudo = 3
+End Enum
+Public Enum Sexo As Byte
+    Femenino = 0
+    Masculino = 1
+End Enum
+
 Public Class Persona
     Private Nombre, Apellido, Dni, Tipo, Numero, DigitoVerificador As TextBox
     Private CmbSexoa, CmbEstadoCivila As ComboBox

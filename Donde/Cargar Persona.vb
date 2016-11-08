@@ -1,17 +1,9 @@
-﻿Public Enum EstadoCivil As Byte
-    Soltero = 0
-    Casado = 1
-    Separado = 2
-    Viudo = 3
-End Enum
-Public Enum Sexo As Byte
-    Femenino = 0
-    Masculino = 1
-End Enum
+﻿Imports Oracle.DataAccess.Client
 Public Class F_CPersona
     Private oPersona As New Persona
 
     Private Sub F_CPersona_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        CargarCombosDir()
         With oPersona
             .CargarCombobox(CmbSexo, CmbEstadoCivil) 'Carga los Cmb Con Items
             .CargarNombre = TxtNombre
@@ -60,18 +52,42 @@ Public Class F_CPersona
     End Sub
     'Validacion para cada textboxs'''''Si uno de los textboxs no contiene datos no guardara los datos
     Public Function ValidacionesDeTextBoxs() As Boolean
-        If TxtApellido.Text = "" And + _
-            TxtNombre.Text = "" And + _
-            TxtDni.Text = "" And + _
-            TxtTipo.Text = "" And + _
-            TxtNumero.Text = "" And + _
-            TxtDigitoVerificador.Text = "" Then
+        If Nothing = (TxtApellido.Text) And
+            Nothing=(TxtNombre.Text) And
+            Nothing=(TxtDni.Text) And
+            Nothing=(TxtTipo.Text) And
+            Nothing=(TxtNumero.Text) And
+            Nothing=(TxtDigitoVerificador.Text) Then
             Return False
         Else
             Return True
         End If
     End Function
+
+
+    Public Sub CargarCombosDir()
+        Dim Conexion As New Oracleconnection
+        Dim ProvinciaDS As New DataSet
+        Dim Adaptador As New OracleDataAdapter("Select * From Provincia", Conexion)
+        Try
+            Conexion.ConnectionString = "Data Source=localhost;" _
+                                        + "User Id=Direccion;" _
+                                        + "Password=jjbm5526;"
+
+            Adaptador.Fill(ProvinciaDS, "Provincia")
+            CmbProvincia.DataSource = ProvinciaDS.Tables("Provincia")
+            CmbProvincia.DisplayMember = "Nombre"
+            CmbProvincia.ValueMember = "ID_Provincia"
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+            Exit Sub
+        End Try
+
+    End Sub
+
     Private Sub Cancelar_Click(sender As Object, e As EventArgs) Handles Cancelar.Click
+        F_Donde.Show()
         Me.Close()
     End Sub
 End Class
