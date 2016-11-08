@@ -9,7 +9,10 @@ Public Class F_CSitio
         '"With": Ejecuta una serie de acciones que hacen referencia a un nico objeto
 
         With OSitio ' "Mensajes" Invocacion de Metodos por medio de un Objeto de la Clase
-
+            .CargaCmbRubroa() = CmbRubro
+            .CargaCmbTipoRa() = CmbTrubro
+            .CargaRubro()
+            .CargaTRubro()
             .CargaNombreSitio() = TxtNombreS
             .CargaDtpFAltaa() = DtpFAlta
             .CargaTablaSitio()

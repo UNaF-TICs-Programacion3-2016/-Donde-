@@ -275,7 +275,7 @@ Public Class Sitios
     'Relacion de Agregacion
 
     Private NombreSitioa As TextBox
-    'Private CmbRubroa, CmbTipoa As ComboBox
+    Private CmbRubroa, CmbTipoRa As ComboBox
     Private DtpFAltaa As DateTimePicker
 
     'Esquema Desconectado
@@ -314,6 +314,48 @@ Public Class Sitios
         
 
 
+    End Sub
+
+    Public Sub CargaRubro()
+        Dim Conexion As New OracleConnection()
+        Dim RubroDS As New DataSet
+        Dim AdaptadorR As New OracleDataAdapter("Select * From Rubro", Conexion)
+
+        Try
+            Conexion.ConnectionString = "Data Source=localhost;" _
+                                        + "User Id=Sitio;" _
+                                        + "Password=123456789;"
+
+            AdaptadorR.Fill(RubroDS, "Rubro")
+            CmbRubroa.DataSource = RubroDS.Tables("Rubro")
+            CmbRubroa.DisplayMember = "Descripcion"
+            CmbRubroa.ValueMember = "Id_Rubro"
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+            Exit Sub
+        End Try
+    End Sub
+
+    Public Sub CargaTRubro()
+        Dim Conexion As New OracleConnection()
+        Dim TipoRDS As New DataSet
+        Dim AdaptadorTR As New OracleDataAdapter("Select * From Tipo_Rubro", Conexion)
+
+        Try
+            Conexion.ConnectionString = "Data Source=localhost;" _
+                                        + "User Id=Sitio;" _
+                                        + "Password=123456789;"
+
+            AdaptadorTR.Fill(TipoRDS, "Tipo_Rubro")
+            CmbTipoRa.DataSource = TipoRDS.Tables("Tipo_Rubro")
+            CmbTipoRa.DisplayMember = "Descripcion"
+            CmbTipoRa.ValueMember = "Id_Tiporubro"
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+            Exit Sub
+        End Try
     End Sub
 
     Public Sub AgregarSitio()
@@ -405,7 +447,29 @@ Public Class Sitios
 
     End Property
 
+    Public WriteOnly Property CargaCmbRubroa() As ComboBox
 
+        'Get
+        '    Return CmbRubroa
+        'End Get
+
+        Set(ByVal value As ComboBox)
+            CmbRubroa = value
+        End Set
+
+    End Property
+
+    Public WriteOnly Property CargaCmbTipoRa() As ComboBox
+
+        'Get
+        '    Return CmbTipoRa
+        'End Get
+
+        Set(ByVal value As ComboBox)
+            CmbTipoRa = value
+        End Set
+
+    End Property
 
 
 End Class

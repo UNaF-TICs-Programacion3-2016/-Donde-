@@ -31,4 +31,6 @@ Public Class F_Donde
     Private Sub BtnDSalir_Click(sender As Object, e As EventArgs) Handles BtnDSalir.Click
         Me.Close()
     End Sub
+
+    
 End Class

@@ -31,6 +31,10 @@ Partial Class F_CSitio
         Me.BtnSCancelar = New System.Windows.Forms.Button()
         Me.GB_CPBtn = New System.Windows.Forms.GroupBox()
         Me.BtnDAgrRub = New System.Windows.Forms.Button()
+        Me.Lbl_EstadoCivil = New System.Windows.Forms.Label()
+        Me.Lbl_Sexo = New System.Windows.Forms.Label()
+        Me.CmbTrubro = New System.Windows.Forms.ComboBox()
+        Me.CmbRubro = New System.Windows.Forms.ComboBox()
         Me.GB_CPD.SuspendLayout()
         Me.GB_CPBtn.SuspendLayout()
         Me.SuspendLayout()
@@ -49,7 +53,7 @@ Partial Class F_CSitio
         'DtpFAlta
         '
         Me.DtpFAlta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DtpFAlta.Location = New System.Drawing.Point(168, 156)
+        Me.DtpFAlta.Location = New System.Drawing.Point(168, 162)
         Me.DtpFAlta.Name = "DtpFAlta"
         Me.DtpFAlta.Size = New System.Drawing.Size(100, 20)
         Me.DtpFAlta.TabIndex = 20
@@ -75,9 +79,13 @@ Partial Class F_CSitio
         'GB_CPD
         '
         Me.GB_CPD.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.GB_CPD.Controls.Add(Me.Lbl_EstadoCivil)
         Me.GB_CPD.Controls.Add(Me.TxtNombreS)
+        Me.GB_CPD.Controls.Add(Me.Lbl_Sexo)
         Me.GB_CPD.Controls.Add(Me.Lbl_Nombre)
+        Me.GB_CPD.Controls.Add(Me.CmbTrubro)
         Me.GB_CPD.Controls.Add(Me.DtpFAlta)
+        Me.GB_CPD.Controls.Add(Me.CmbRubro)
         Me.GB_CPD.Controls.Add(Me.Lbl_FNacimiento)
         Me.GB_CPD.Location = New System.Drawing.Point(12, 12)
         Me.GB_CPD.Name = "GB_CPD"
@@ -125,6 +133,46 @@ Partial Class F_CSitio
         Me.BtnDAgrRub.Text = "Agregar Rubro"
         Me.BtnDAgrRub.UseVisualStyleBackColor = True
         '
+        'Lbl_EstadoCivil
+        '
+        Me.Lbl_EstadoCivil.AutoSize = True
+        Me.Lbl_EstadoCivil.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.Lbl_EstadoCivil.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl_EstadoCivil.Location = New System.Drawing.Point(130, 130)
+        Me.Lbl_EstadoCivil.Name = "Lbl_EstadoCivil"
+        Me.Lbl_EstadoCivil.Size = New System.Drawing.Size(32, 13)
+        Me.Lbl_EstadoCivil.TabIndex = 35
+        Me.Lbl_EstadoCivil.Text = "Tipo"
+        '
+        'Lbl_Sexo
+        '
+        Me.Lbl_Sexo.AutoSize = True
+        Me.Lbl_Sexo.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.Lbl_Sexo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl_Sexo.Location = New System.Drawing.Point(121, 97)
+        Me.Lbl_Sexo.Name = "Lbl_Sexo"
+        Me.Lbl_Sexo.Size = New System.Drawing.Size(41, 13)
+        Me.Lbl_Sexo.TabIndex = 32
+        Me.Lbl_Sexo.Text = "Rubro"
+        '
+        'CmbTrubro
+        '
+        Me.CmbTrubro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CmbTrubro.FormattingEnabled = True
+        Me.CmbTrubro.Location = New System.Drawing.Point(168, 127)
+        Me.CmbTrubro.Name = "CmbTrubro"
+        Me.CmbTrubro.Size = New System.Drawing.Size(209, 21)
+        Me.CmbTrubro.TabIndex = 34
+        '
+        'CmbRubro
+        '
+        Me.CmbRubro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CmbRubro.FormattingEnabled = True
+        Me.CmbRubro.Location = New System.Drawing.Point(168, 89)
+        Me.CmbRubro.Name = "CmbRubro"
+        Me.CmbRubro.Size = New System.Drawing.Size(209, 21)
+        Me.CmbRubro.TabIndex = 33
+        '
         'F_CSitio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -150,4 +198,8 @@ Partial Class F_CSitio
     Friend WithEvents BtnSCancelar As System.Windows.Forms.Button
     Friend WithEvents GB_CPBtn As System.Windows.Forms.GroupBox
     Friend WithEvents BtnDAgrRub As System.Windows.Forms.Button
+    Friend WithEvents Lbl_EstadoCivil As System.Windows.Forms.Label
+    Friend WithEvents Lbl_Sexo As System.Windows.Forms.Label
+    Friend WithEvents CmbTrubro As System.Windows.Forms.ComboBox
+    Friend WithEvents CmbRubro As System.Windows.Forms.ComboBox
 End Class
