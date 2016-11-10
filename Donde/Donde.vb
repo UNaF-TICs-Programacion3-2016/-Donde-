@@ -11,6 +11,7 @@ Public Class F_Donde
     Friend IdPersona As Long
     Friend IdSitio As Long
     Friend IdRubro As Long
+    Friend IdTRubro As Long
 
     ' Llama al formolario para realizar la carga de los datos de una perosna a la Base de Datos
     Private Sub Btn_AP_Click(sender As Object, e As EventArgs) Handles Btn_AP.Click

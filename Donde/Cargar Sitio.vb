@@ -2,6 +2,7 @@
 
 Public Class F_CSitio
 
+
     Public OSitio As New Sitios 'Instancia de la Clase Sitio 
 
     Private Sub F_CSitio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -11,17 +12,14 @@ Public Class F_CSitio
         With OSitio ' "Mensajes" Invocacion de Metodos por medio de un Objeto de la Clase
             .CargaCmbRubroa() = CmbRubro
             .CargaCmbTipoRa() = CmbTrubro
-            .CargaRubro()
-            .CargaTRubro()
+            .CargaCmbRubro()
+            .CargaCmbTRubro()
             .CargaNombreSitio() = TxtNombreS
             .CargaDtpFAltaa() = DtpFAlta
             .CargaTablaSitio()
 
         End With
 
-        'If TxtNombre.Text = "" And TxtApellido.Text = "" And TxtDni.Text = "" And TxtTipo.Text = "" And TxtNumero.Text = "" And TxtDigitoVerificador.Text = "" Then
-        '    AceptarCmd.Enabled = False
-        'End If
 
     End Sub
 

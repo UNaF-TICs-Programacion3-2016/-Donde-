@@ -274,7 +274,7 @@ Public Class Sitios
 
     'Relacion de Agregacion
 
-    Private NombreSitioa As TextBox
+    Private NombreSitioa, DescRubroa, CodRubroa, DescTRubroa, CodTRubroa As TextBox
     Private CmbRubroa, CmbTipoRa As ComboBox
     Private DtpFAltaa As DateTimePicker
 
@@ -285,7 +285,9 @@ Public Class Sitios
     Dim Adaptador As OracleDataAdapter
     'Oracle.System.Data
     Dim SitioDS As New DataSet
-    Dim Registro As DataRow
+    Public RubroDS, TRubroDS As New DataSet
+    Dim Registro, Registro1 As DataRow
+    
 
     'Metodos Generales(Funciones y Procedimientos)
 
@@ -316,10 +318,63 @@ Public Class Sitios
 
     End Sub
 
-    Public Sub CargaRubro()
+    Public Sub CargaTablaRubro()
+
+        'Carga en Memoria Principal de la Tabla Rubro
+        Adaptador = New OracleDataAdapter("Select * From Rubro Where Id_Rubro = " + F_Donde.IdRubro.ToString, Conexion)
+        Adaptador.Fill(RubroDS, "rubro")
+
+
+        If F_Donde.Accion = TipoAccion.Alta Then
+            Registro1 = RubroDS.Tables("rubro").NewRow()
+            Registro1("ID_RUBRO") = -1
+        Else
+            Registro1 = RubroDS.Tables("rubro").Rows.Item(0)
+        End If
+
+        CodRubroa.Text = Registro1("CODIGO").ToString
+        DescRubroa.Text = Registro1("DESCRIPCION").ToString
+
+        'Bloque de los texbox segun la condicion
+        CodRubroa.Enabled = (F_Donde.Accion <> TipoAccion.Baja)
+        DescRubroa.Enabled = (F_Donde.Accion <> TipoAccion.Baja)
+
+    End Sub
+
+    Public Sub CargaTablaTRubro()
+
+        'Carga en Memoria Principal de la Tabla Tipo_Rubro
+        Adaptador = New OracleDataAdapter("Select * From Tipo_Rubro Where Id_Tiporubro = " + F_Donde.IdSitio.ToString, Conexion)
+        Adaptador.Fill(TRubroDS, "tipo_rubro")
+        If F_Donde.Accion = TipoAccion.Alta Then
+            Registro = TRubroDS.Tables("tipo_rubro").NewRow()
+            Registro("ID_TIPORUBRO") = -1
+        Else
+            Registro = TRubroDS.Tables("tipo_rubro").Rows.Item(0)
+        End If
+
+        CodTRubroa.Text = Registro("CODIGO").ToString
+        DescTRubroa.Text = Registro("DESCRIPCION").ToString
+
+        'Bloque de los texbox segun la condicion
+        CodTRubroa.Enabled = (F_Donde.Accion <> TipoAccion.Baja)
+        DescTRubroa.Enabled = (F_Donde.Accion <> TipoAccion.Baja)
+
+
+
+
+    End Sub
+    'Carga de los combobox desde la Base de Datos
+
+    Public Sub CargaCmbRubro()
+
+        'Esquema Desconectado
+
+        'Oracle.DataAcces.Client
         Dim Conexion As New OracleConnection()
-        Dim RubroDS As New DataSet
         Dim AdaptadorR As New OracleDataAdapter("Select * From Rubro", Conexion)
+        'Oracle.System.Data
+        Dim RubroDS As New DataSet
 
         Try
             Conexion.ConnectionString = "Data Source=localhost;" _
@@ -337,10 +392,15 @@ Public Class Sitios
         End Try
     End Sub
 
-    Public Sub CargaTRubro()
+    Public Sub CargaCmbTRubro()
+
+        'Esquema Desconectado
+
+        'Oracle.DataAcces.Client
         Dim Conexion As New OracleConnection()
-        Dim TipoRDS As New DataSet
         Dim AdaptadorTR As New OracleDataAdapter("Select * From Tipo_Rubro", Conexion)
+        'Oracle.System.Data
+        Dim TipoRDS As New DataSet
 
         Try
             Conexion.ConnectionString = "Data Source=localhost;" _
@@ -357,6 +417,132 @@ Public Class Sitios
             Exit Sub
         End Try
     End Sub
+
+    'Carga de un nuevo Rubro en la Base de Datos
+    Public Sub AgregarRubro()
+        'Oracle.DataAccess()
+        'DataAdapter(Objetos)
+        Dim InsertCmd As New OracleCommand
+        Dim UpdateCmd As New OracleCommand
+        Dim DeleteCmd As New OracleCommand
+
+        Registro1("CODIGO") = CodRubroa.Text
+        Registro1("DESCRIPCION") = DescRubroa.Text
+
+
+        If F_Donde.Accion = TipoAccion.Alta Then
+            RubroDS.Tables("rubro").Rows.Add(Registro1)
+        ElseIf F_Donde.Accion = TipoAccion.Baja Then
+            RubroDS.Tables("rubro").Rows.Remove(Registro1)
+        End If
+
+        InsertCmd.CommandText = "Insert Into rubro (id_rubro,codigo,descripcion) " + _
+           "VALUES (:id_rubro,:codigo,:descripcion)"
+        UpdateCmd.CommandText = "Update Rubro " + _
+            "set Codigo = :codigo," + _
+                "Descripcion = :descripcion" + _
+            "where Id_Rubro = :id_rubro"
+
+        DeleteCmd.CommandText = "Delete * From Rubro Where Id_Rubro = :id_rubro"
+
+        InsertCmd.Connection = Conexion
+        UpdateCmd.Connection = Conexion
+        DeleteCmd.Connection = Conexion
+
+        InsertCmd.Parameters.Add(New OracleParameter(":id_rubro", OracleDbType.Int32, 0, "ID_RUBRO"))
+        InsertCmd.Parameters.Add(New OracleParameter(":codigo", OracleDbType.Int32, 0, "CODIGO"))
+        InsertCmd.Parameters.Add(New OracleParameter(":descripcion", OracleDbType.Varchar2, 30, "DESCRIPCION"))
+
+        UpdateCmd.Parameters.Add(New OracleParameter(":id_rubro", OracleDbType.Int32, 0, "ID_RUBRO"))
+        UpdateCmd.Parameters.Add(New OracleParameter(":codigo", OracleDbType.Int32, 0, "CODIGO"))
+        UpdateCmd.Parameters.Add(New OracleParameter(":descripcion", OracleDbType.Varchar2, 30, "DESCRIPCION"))
+
+
+        DeleteCmd.Parameters.Add(New OracleParameter(":id_rubro", OracleDbType.Int32, 0, "ID_RUBRO"))
+
+        Adaptador.InsertCommand = InsertCmd
+        Adaptador.UpdateCommand = UpdateCmd
+        Adaptador.DeleteCommand = DeleteCmd
+        Try
+            Adaptador.Update(RubroDS, "RUBRO")
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+        If F_Donde.Accion = TipoAccion.Alta Then
+            MessageBox.Show("Los datos se guardaron correctamente.")
+        ElseIf F_Donde.Accion = TipoAccion.Modificacion Then
+            MessageBox.Show("Los datos se actualizaron correctamente.")
+        Else
+            MessageBox.Show("El registro se eliminó correctamente.")
+        End If
+
+    End Sub
+
+    'Carga de un nuevo Tipo de Rubro en la Base de Datos
+    Public Sub AgregarTipoRubro()
+        'Oracle.DataAccess()
+        'DataAdapter(Objetos)
+        Dim InsertCmd As New OracleCommand
+        Dim UpdateCmd As New OracleCommand
+        Dim DeleteCmd As New OracleCommand
+
+       
+
+        Registro("CODIGO") = CodTRubroa.Text
+        Registro("DESCRIPCION") = DescTRubroa.Text
+
+
+        If F_Donde.Accion = TipoAccion.Alta Then
+            TRubroDS.Tables("tipo_rubro").Rows.Add(Registro)
+        ElseIf F_Donde.Accion = TipoAccion.Baja Then
+            TRubroDS.Tables("tipo_rubro").Rows.Remove(Registro)
+        End If
+
+        InsertCmd.CommandText = "Insert Into tipo_rubro (id_tiporubro,codigo,descripcion) " + _
+           "VALUES (:id_tiporubro,:codigo,:descripcion)"
+        UpdateCmd.CommandText = "Update Rubro " + _
+            "set Codigo = :codigo," + _
+                "Descripcion = :descripcion" + _
+            "where Id_Rubro = :id_tiporubro"
+
+        DeleteCmd.CommandText = "Delete * From Rubro Where Id_TipoRubro = :id_tiporubro"
+
+        InsertCmd.Connection = Conexion
+        UpdateCmd.Connection = Conexion
+        DeleteCmd.Connection = Conexion
+
+        InsertCmd.Parameters.Add(New OracleParameter(":id_tiporubro", OracleDbType.Int32, 0, "ID_TIPORUBRO"))
+        InsertCmd.Parameters.Add(New OracleParameter(":codigo", OracleDbType.Int32, 0, "CODIGO"))
+        InsertCmd.Parameters.Add(New OracleParameter(":descrpcion", OracleDbType.Varchar2, 0, "DESCRIPCION"))
+
+        UpdateCmd.Parameters.Add(New OracleParameter(":id_tiporubro", OracleDbType.Int32, 0, "ID_TIPORUBRO"))
+        UpdateCmd.Parameters.Add(New OracleParameter(":codigo", OracleDbType.Int32, 0, "CODIGO"))
+        UpdateCmd.Parameters.Add(New OracleParameter(":descripcion", OracleDbType.Varchar2, 0, "DESCRIPCION"))
+
+
+        DeleteCmd.Parameters.Add(New OracleParameter(":id_tiporubro", OracleDbType.Int32, 0, "ID_TIPORUBRO"))
+
+        Adaptador.InsertCommand = InsertCmd
+        Adaptador.UpdateCommand = UpdateCmd
+        Adaptador.DeleteCommand = DeleteCmd
+        Try
+            Adaptador.Update(TRubroDS, "TIPO_RUBRO")
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+        If F_Donde.Accion = TipoAccion.Alta Then
+            MessageBox.Show("Los datos se guardaron correctamente.")
+        ElseIf F_Donde.Accion = TipoAccion.Modificacion Then
+            MessageBox.Show("Los datos se actualizaron correctamente.")
+        Else
+            MessageBox.Show("El registro se eliminó correctamente.")
+        End If
+
+    End Sub
+
+    'Carga de un nuevo Sitio en la Base de Datos 
 
     Public Sub AgregarSitio()
 
@@ -428,6 +614,8 @@ Public Class Sitios
 
     'Metodos de Accesos a los Atributos
 
+    'Camdio de estado al atributo
+
     Public Property CargaNombreSitio() As TextBox
 
         Get
@@ -439,6 +627,8 @@ Public Class Sitios
         End Set
     End Property
 
+    'Camdio de estado al atributo
+
     Public WriteOnly Property CargaDtpFAltaa() As DateTimePicker
 
         Set(ByVal value As DateTimePicker)
@@ -447,11 +637,13 @@ Public Class Sitios
 
     End Property
 
-    Public WriteOnly Property CargaCmbRubroa() As ComboBox
+    'Camdio de estado al atributo
 
-        'Get
-        '    Return CmbRubroa
-        'End Get
+    Public Property CargaCmbRubroa() As ComboBox
+
+        Get
+            Return CmbRubroa
+        End Get
 
         Set(ByVal value As ComboBox)
             CmbRubroa = value
@@ -459,17 +651,70 @@ Public Class Sitios
 
     End Property
 
-    Public WriteOnly Property CargaCmbTipoRa() As ComboBox
+    'Camdio de estado al atributo
 
-        'Get
-        '    Return CmbTipoRa
-        'End Get
+    Public Property CargaCmbTipoRa() As ComboBox
+
+        Get
+            Return CmbTipoRa
+        End Get
 
         Set(ByVal value As ComboBox)
             CmbTipoRa = value
         End Set
 
     End Property
+
+    'Camdio de estado al atributo
+
+    Public Property CEstadoDescRubroa() As TextBox
+        Get
+            Return DescRubroa
+        End Get
+
+        Set(ByVal value As TextBox)
+            DescRubroa = value
+        End Set
+
+    End Property
+
+    'Camdio de estado al atributo
+
+    Public Property CEstadoCodRubroa() As TextBox
+        Get
+            Return CodRubroa
+        End Get
+        Set(ByVal value As TextBox)
+            CodRubroa = value
+        End Set
+
+    End Property
+
+    'Camdio de estado al atributo
+
+    Public Property CEstadoCodTRubroa() As TextBox
+        Get
+            Return CodTRubroa
+        End Get
+        Set(ByVal value As TextBox)
+            CodTRubroa = value
+        End Set
+
+    End Property
+
+    'Camdio de estado al atributo
+
+    Public Property CEstadoDescTRubroa() As TextBox
+        Get
+            Return DescTRubroa
+        End Get
+        Set(ByVal value As TextBox)
+            DescTRubroa = value
+        End Set
+
+    End Property
+
+
 
 
 End Class
