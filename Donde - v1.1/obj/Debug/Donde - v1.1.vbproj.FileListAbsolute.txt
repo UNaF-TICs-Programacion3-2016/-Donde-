@@ -1,1 +1,14 @@
 D:\Darius Aguilera\UNAF\PROGRAMACION3\Donde\Donde - v1.1\Donde - v1.1\bin\Debug\Donde - v1.1.exe.config
+C:\Users\DARIO\Documents\-Donde-\Donde - v1.1\bin\Debug\Donde - v1.1.exe.config
+C:\Users\DARIO\Documents\-Donde-\Donde - v1.1\bin\Debug\Donde - v1.1.exe
+C:\Users\DARIO\Documents\-Donde-\Donde - v1.1\bin\Debug\Donde - v1.1.pdb
+C:\Users\DARIO\Documents\-Donde-\Donde - v1.1\bin\Debug\Donde - v1.1.xml
+C:\Users\DARIO\Documents\-Donde-\Donde - v1.1\bin\Debug\Oracle.DataAccess.dll
+C:\Users\DARIO\Documents\-Donde-\Donde - v1.1\obj\Debug\Donde_1._0.F_CargaSitio.resources
+C:\Users\DARIO\Documents\-Donde-\Donde - v1.1\obj\Debug\Donde_1._0.F_Donde.resources
+C:\Users\DARIO\Documents\-Donde-\Donde - v1.1\obj\Debug\Donde_1._0.Resources.resources
+C:\Users\DARIO\Documents\-Donde-\Donde - v1.1\obj\Debug\Donde_1._0.F_CargaRubros.resources
+C:\Users\DARIO\Documents\-Donde-\Donde - v1.1\obj\Debug\Donde - v1.1.vbproj.GenerateResource.Cache
+C:\Users\DARIO\Documents\-Donde-\Donde - v1.1\obj\Debug\Donde - v1.1.exe
+C:\Users\DARIO\Documents\-Donde-\Donde - v1.1\obj\Debug\Donde - v1.1.xml
+C:\Users\DARIO\Documents\-Donde-\Donde - v1.1\obj\Debug\Donde - v1.1.pdb

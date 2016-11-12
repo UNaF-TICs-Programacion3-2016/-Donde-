@@ -23,17 +23,18 @@ Partial Class F_CargaSitio
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(F_CargaSitio))
-        Me.Lbl_FNacimiento = New System.Windows.Forms.Label()
-        Me.DtpFAlta = New System.Windows.Forms.DateTimePicker()
-        Me.TxtNombreS = New System.Windows.Forms.TextBox()
-        Me.Lbl_Nombre = New System.Windows.Forms.Label()
         Me.GB_CPD = New System.Windows.Forms.GroupBox()
         Me.Lbl_EstadoCivil = New System.Windows.Forms.Label()
+        Me.TxtNombreS = New System.Windows.Forms.TextBox()
         Me.Lbl_Sexo = New System.Windows.Forms.Label()
+        Me.Lbl_Nombre = New System.Windows.Forms.Label()
         Me.CmbSRubro = New System.Windows.Forms.ComboBox()
+        Me.DtpFAlta = New System.Windows.Forms.DateTimePicker()
         Me.CmbRubro = New System.Windows.Forms.ComboBox()
-        Me.BtnSAceptar = New System.Windows.Forms.Button()
+        Me.Lbl_FNacimiento = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.BtnSCancelar = New System.Windows.Forms.Button()
+        Me.BtnSAceptar = New System.Windows.Forms.Button()
         Me.TabPCarga = New System.Windows.Forms.TabControl()
         Me.TabPDireccion = New System.Windows.Forms.TabPage()
         Me.BtnElimD = New System.Windows.Forms.Button()
@@ -47,52 +48,14 @@ Partial Class F_CargaSitio
         Me.BtnAgregarC = New System.Windows.Forms.Button()
         Me.BtnBuscC = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GB_CPD.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.TabPCarga.SuspendLayout()
         Me.TabPDireccion.SuspendLayout()
         CType(Me.DGDireccion, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPContacto.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Lbl_FNacimiento
-        '
-        Me.Lbl_FNacimiento.AutoSize = True
-        Me.Lbl_FNacimiento.BackColor = System.Drawing.Color.Transparent
-        Me.Lbl_FNacimiento.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lbl_FNacimiento.Location = New System.Drawing.Point(347, 29)
-        Me.Lbl_FNacimiento.Name = "Lbl_FNacimiento"
-        Me.Lbl_FNacimiento.Size = New System.Drawing.Size(86, 13)
-        Me.Lbl_FNacimiento.TabIndex = 25
-        Me.Lbl_FNacimiento.Text = "Fecha de Alta"
-        '
-        'DtpFAlta
-        '
-        Me.DtpFAlta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DtpFAlta.Location = New System.Drawing.Point(350, 45)
-        Me.DtpFAlta.Name = "DtpFAlta"
-        Me.DtpFAlta.Size = New System.Drawing.Size(100, 20)
-        Me.DtpFAlta.TabIndex = 20
-        '
-        'TxtNombreS
-        '
-        Me.TxtNombreS.Location = New System.Drawing.Point(12, 45)
-        Me.TxtNombreS.Name = "TxtNombreS"
-        Me.TxtNombreS.Size = New System.Drawing.Size(293, 20)
-        Me.TxtNombreS.TabIndex = 13
-        '
-        'Lbl_Nombre
-        '
-        Me.Lbl_Nombre.AutoSize = True
-        Me.Lbl_Nombre.BackColor = System.Drawing.Color.Transparent
-        Me.Lbl_Nombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lbl_Nombre.Location = New System.Drawing.Point(9, 29)
-        Me.Lbl_Nombre.Name = "Lbl_Nombre"
-        Me.Lbl_Nombre.Size = New System.Drawing.Size(66, 13)
-        Me.Lbl_Nombre.TabIndex = 29
-        Me.Lbl_Nombre.Text = " Nombre/s"
         '
         'GB_CPD
         '
@@ -108,7 +71,7 @@ Partial Class F_CargaSitio
         Me.GB_CPD.Controls.Add(Me.Lbl_FNacimiento)
         Me.GB_CPD.Location = New System.Drawing.Point(0, 2)
         Me.GB_CPD.Name = "GB_CPD"
-        Me.GB_CPD.Size = New System.Drawing.Size(645, 121)
+        Me.GB_CPD.Size = New System.Drawing.Size(593, 121)
         Me.GB_CPD.TabIndex = 30
         Me.GB_CPD.TabStop = False
         Me.GB_CPD.Text = "Carga de Datos"
@@ -124,6 +87,13 @@ Partial Class F_CargaSitio
         Me.Lbl_EstadoCivil.TabIndex = 35
         Me.Lbl_EstadoCivil.Text = "Sub Rubro"
         '
+        'TxtNombreS
+        '
+        Me.TxtNombreS.Location = New System.Drawing.Point(12, 45)
+        Me.TxtNombreS.Name = "TxtNombreS"
+        Me.TxtNombreS.Size = New System.Drawing.Size(293, 20)
+        Me.TxtNombreS.TabIndex = 13
+        '
         'Lbl_Sexo
         '
         Me.Lbl_Sexo.AutoSize = True
@@ -135,6 +105,17 @@ Partial Class F_CargaSitio
         Me.Lbl_Sexo.TabIndex = 32
         Me.Lbl_Sexo.Text = "Rubro"
         '
+        'Lbl_Nombre
+        '
+        Me.Lbl_Nombre.AutoSize = True
+        Me.Lbl_Nombre.BackColor = System.Drawing.Color.Transparent
+        Me.Lbl_Nombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl_Nombre.Location = New System.Drawing.Point(9, 29)
+        Me.Lbl_Nombre.Name = "Lbl_Nombre"
+        Me.Lbl_Nombre.Size = New System.Drawing.Size(66, 13)
+        Me.Lbl_Nombre.TabIndex = 29
+        Me.Lbl_Nombre.Text = " Nombre/s"
+        '
         'CmbSRubro
         '
         Me.CmbSRubro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
@@ -143,6 +124,14 @@ Partial Class F_CargaSitio
         Me.CmbSRubro.Name = "CmbSRubro"
         Me.CmbSRubro.Size = New System.Drawing.Size(209, 21)
         Me.CmbSRubro.TabIndex = 34
+        '
+        'DtpFAlta
+        '
+        Me.DtpFAlta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DtpFAlta.Location = New System.Drawing.Point(350, 45)
+        Me.DtpFAlta.Name = "DtpFAlta"
+        Me.DtpFAlta.Size = New System.Drawing.Size(100, 20)
+        Me.DtpFAlta.TabIndex = 20
         '
         'CmbRubro
         '
@@ -153,23 +142,47 @@ Partial Class F_CargaSitio
         Me.CmbRubro.Size = New System.Drawing.Size(209, 21)
         Me.CmbRubro.TabIndex = 33
         '
-        'BtnSAceptar
+        'Lbl_FNacimiento
         '
-        Me.BtnSAceptar.Location = New System.Drawing.Point(558, 228)
-        Me.BtnSAceptar.Name = "BtnSAceptar"
-        Me.BtnSAceptar.Size = New System.Drawing.Size(63, 26)
-        Me.BtnSAceptar.TabIndex = 26
-        Me.BtnSAceptar.Text = "Aceptar"
-        Me.BtnSAceptar.UseVisualStyleBackColor = True
+        Me.Lbl_FNacimiento.AutoSize = True
+        Me.Lbl_FNacimiento.BackColor = System.Drawing.Color.Transparent
+        Me.Lbl_FNacimiento.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl_FNacimiento.Location = New System.Drawing.Point(347, 29)
+        Me.Lbl_FNacimiento.Name = "Lbl_FNacimiento"
+        Me.Lbl_FNacimiento.Size = New System.Drawing.Size(86, 13)
+        Me.Lbl_FNacimiento.TabIndex = 25
+        Me.Lbl_FNacimiento.Text = "Fecha de Alta"
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.BackColor = System.Drawing.Color.Silver
+        Me.GroupBox1.BackgroundImage = CType(resources.GetObject("GroupBox1.BackgroundImage"), System.Drawing.Image)
+        Me.GroupBox1.Controls.Add(Me.BtnSCancelar)
+        Me.GroupBox1.Controls.Add(Me.BtnSAceptar)
+        Me.GroupBox1.Controls.Add(Me.TabPCarga)
+        Me.GroupBox1.Location = New System.Drawing.Point(0, 129)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(593, 259)
+        Me.GroupBox1.TabIndex = 33
+        Me.GroupBox1.TabStop = False
         '
         'BtnSCancelar
         '
-        Me.BtnSCancelar.Location = New System.Drawing.Point(474, 228)
+        Me.BtnSCancelar.Location = New System.Drawing.Point(434, 228)
         Me.BtnSCancelar.Name = "BtnSCancelar"
         Me.BtnSCancelar.Size = New System.Drawing.Size(60, 25)
         Me.BtnSCancelar.TabIndex = 27
         Me.BtnSCancelar.Text = "Cancelar"
         Me.BtnSCancelar.UseVisualStyleBackColor = True
+        '
+        'BtnSAceptar
+        '
+        Me.BtnSAceptar.Location = New System.Drawing.Point(518, 228)
+        Me.BtnSAceptar.Name = "BtnSAceptar"
+        Me.BtnSAceptar.Size = New System.Drawing.Size(63, 26)
+        Me.BtnSAceptar.TabIndex = 26
+        Me.BtnSAceptar.Text = "Aceptar"
+        Me.BtnSAceptar.UseVisualStyleBackColor = True
         '
         'TabPCarga
         '
@@ -178,7 +191,7 @@ Partial Class F_CargaSitio
         Me.TabPCarga.Location = New System.Drawing.Point(12, 19)
         Me.TabPCarga.Name = "TabPCarga"
         Me.TabPCarga.SelectedIndex = 0
-        Me.TabPCarga.Size = New System.Drawing.Size(619, 207)
+        Me.TabPCarga.Size = New System.Drawing.Size(573, 207)
         Me.TabPCarga.TabIndex = 32
         '
         'TabPDireccion
@@ -192,7 +205,7 @@ Partial Class F_CargaSitio
         Me.TabPDireccion.Location = New System.Drawing.Point(4, 22)
         Me.TabPDireccion.Name = "TabPDireccion"
         Me.TabPDireccion.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPDireccion.Size = New System.Drawing.Size(611, 181)
+        Me.TabPDireccion.Size = New System.Drawing.Size(565, 181)
         Me.TabPDireccion.TabIndex = 0
         Me.TabPDireccion.Text = "Direccion"
         Me.TabPDireccion.UseVisualStyleBackColor = True
@@ -217,7 +230,7 @@ Partial Class F_CargaSitio
         '
         'BtnAgregarD
         '
-        Me.BtnAgregarD.Location = New System.Drawing.Point(57, 6)
+        Me.BtnAgregarD.Location = New System.Drawing.Point(43, 6)
         Me.BtnAgregarD.Name = "BtnAgregarD"
         Me.BtnAgregarD.Size = New System.Drawing.Size(77, 24)
         Me.BtnAgregarD.TabIndex = 9
@@ -238,7 +251,7 @@ Partial Class F_CargaSitio
         Me.DGDireccion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGDireccion.Location = New System.Drawing.Point(6, 36)
         Me.DGDireccion.Name = "DGDireccion"
-        Me.DGDireccion.Size = New System.Drawing.Size(599, 139)
+        Me.DGDireccion.Size = New System.Drawing.Size(553, 139)
         Me.DGDireccion.TabIndex = 0
         '
         'TabPContacto
@@ -252,7 +265,7 @@ Partial Class F_CargaSitio
         Me.TabPContacto.Location = New System.Drawing.Point(4, 22)
         Me.TabPContacto.Name = "TabPContacto"
         Me.TabPContacto.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPContacto.Size = New System.Drawing.Size(611, 181)
+        Me.TabPContacto.Size = New System.Drawing.Size(565, 181)
         Me.TabPContacto.TabIndex = 1
         Me.TabPContacto.Text = "Contacto"
         Me.TabPContacto.UseVisualStyleBackColor = True
@@ -277,7 +290,7 @@ Partial Class F_CargaSitio
         '
         'BtnAgregarC
         '
-        Me.BtnAgregarC.Location = New System.Drawing.Point(57, 6)
+        Me.BtnAgregarC.Location = New System.Drawing.Point(45, 6)
         Me.BtnAgregarC.Name = "BtnAgregarC"
         Me.BtnAgregarC.Size = New System.Drawing.Size(77, 24)
         Me.BtnAgregarC.TabIndex = 5
@@ -298,39 +311,26 @@ Partial Class F_CargaSitio
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(6, 36)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(599, 139)
+        Me.DataGridView1.Size = New System.Drawing.Size(553, 139)
         Me.DataGridView1.TabIndex = 0
         '
-        'GroupBox1
-        '
-        Me.GroupBox1.BackColor = System.Drawing.Color.Silver
-        Me.GroupBox1.BackgroundImage = CType(resources.GetObject("GroupBox1.BackgroundImage"), System.Drawing.Image)
-        Me.GroupBox1.Controls.Add(Me.BtnSCancelar)
-        Me.GroupBox1.Controls.Add(Me.BtnSAceptar)
-        Me.GroupBox1.Controls.Add(Me.TabPCarga)
-        Me.GroupBox1.Location = New System.Drawing.Point(0, 129)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(645, 259)
-        Me.GroupBox1.TabIndex = 33
-        Me.GroupBox1.TabStop = False
-        '
-        'F_CSitio
+        'F_CargaSitio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(643, 387)
+        Me.ClientSize = New System.Drawing.Size(593, 387)
         Me.Controls.Add(Me.GB_CPD)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Name = "F_CSitio"
+        Me.Name = "F_CargaSitio"
         Me.Text = "Cargar Sitio"
         Me.GB_CPD.ResumeLayout(False)
         Me.GB_CPD.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
         Me.TabPCarga.ResumeLayout(False)
         Me.TabPDireccion.ResumeLayout(False)
         CType(Me.DGDireccion, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPContacto.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub

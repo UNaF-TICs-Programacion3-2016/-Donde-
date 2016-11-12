@@ -37,6 +37,9 @@ Partial Class F_Donde
         Me.AcercaDeDondeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.SitioToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RubroToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SubRubroToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -91,26 +94,27 @@ Partial Class F_Donde
         '
         'AgregarToolStripMenuItem
         '
+        Me.AgregarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SitioToolStripMenuItem1, Me.RubroToolStripMenuItem, Me.SubRubroToolStripMenuItem})
         Me.AgregarToolStripMenuItem.Name = "AgregarToolStripMenuItem"
-        Me.AgregarToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
+        Me.AgregarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.AgregarToolStripMenuItem.Text = "Agregar"
         '
         'ModificarToolStripMenuItem1
         '
         Me.ModificarToolStripMenuItem1.Name = "ModificarToolStripMenuItem1"
-        Me.ModificarToolStripMenuItem1.Size = New System.Drawing.Size(125, 22)
+        Me.ModificarToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.ModificarToolStripMenuItem1.Text = "Modificar"
         '
         'EliminarToolStripMenuItem1
         '
         Me.EliminarToolStripMenuItem1.Name = "EliminarToolStripMenuItem1"
-        Me.EliminarToolStripMenuItem1.Size = New System.Drawing.Size(125, 22)
+        Me.EliminarToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.EliminarToolStripMenuItem1.Text = "Eliminar"
         '
         'BuscarToolStripMenuItem1
         '
         Me.BuscarToolStripMenuItem1.Name = "BuscarToolStripMenuItem1"
-        Me.BuscarToolStripMenuItem1.Size = New System.Drawing.Size(125, 22)
+        Me.BuscarToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.BuscarToolStripMenuItem1.Text = "Buscar"
         '
         'AyudaToolStripMenuItem
@@ -147,13 +151,31 @@ Partial Class F_Donde
         Me.PictureBox3.TabIndex = 9
         Me.PictureBox3.TabStop = False
         '
+        'SitioToolStripMenuItem1
+        '
+        Me.SitioToolStripMenuItem1.Name = "SitioToolStripMenuItem1"
+        Me.SitioToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.SitioToolStripMenuItem1.Text = "Sitio"
+        '
+        'RubroToolStripMenuItem
+        '
+        Me.RubroToolStripMenuItem.Name = "RubroToolStripMenuItem"
+        Me.RubroToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.RubroToolStripMenuItem.Text = "Rubro"
+        '
+        'SubRubroToolStripMenuItem
+        '
+        Me.SubRubroToolStripMenuItem.Name = "SubRubroToolStripMenuItem"
+        Me.SubRubroToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SubRubroToolStripMenuItem.Text = "Sub Rubro"
+        '
         'F_Donde
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.ClientSize = New System.Drawing.Size(259, 321)
+        Me.ClientSize = New System.Drawing.Size(259, 322)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.PictureBox1)
@@ -184,5 +206,8 @@ Partial Class F_Donde
     Friend WithEvents AyudaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AcercaDeDondeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
+    Friend WithEvents SitioToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents RubroToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents SubRubroToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class
