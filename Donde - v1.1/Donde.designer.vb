@@ -35,14 +35,14 @@ Partial Class F_Donde
         Me.BuscarToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AcercaDeDondeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.SitioToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.RubroToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SubRubroToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -130,16 +130,23 @@ Partial Class F_Donde
         Me.AcercaDeDondeToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
         Me.AcercaDeDondeToolStripMenuItem.Text = "Acerca de ¿Donde ?"
         '
-        'PictureBox1
+        'SitioToolStripMenuItem1
         '
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.PictureBox1.Image = Global.Donde_1._0.My.Resources.Resources.ICONODONDE
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 27)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(260, 294)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.PictureBox1.TabIndex = 7
-        Me.PictureBox1.TabStop = False
+        Me.SitioToolStripMenuItem1.Name = "SitioToolStripMenuItem1"
+        Me.SitioToolStripMenuItem1.Size = New System.Drawing.Size(129, 22)
+        Me.SitioToolStripMenuItem1.Text = "Sitio"
+        '
+        'RubroToolStripMenuItem
+        '
+        Me.RubroToolStripMenuItem.Name = "RubroToolStripMenuItem"
+        Me.RubroToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
+        Me.RubroToolStripMenuItem.Text = "Rubro"
+        '
+        'SubRubroToolStripMenuItem
+        '
+        Me.SubRubroToolStripMenuItem.Name = "SubRubroToolStripMenuItem"
+        Me.SubRubroToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
+        Me.SubRubroToolStripMenuItem.Text = "Sub Rubro"
         '
         'PictureBox3
         '
@@ -151,23 +158,16 @@ Partial Class F_Donde
         Me.PictureBox3.TabIndex = 9
         Me.PictureBox3.TabStop = False
         '
-        'SitioToolStripMenuItem1
+        'PictureBox1
         '
-        Me.SitioToolStripMenuItem1.Name = "SitioToolStripMenuItem1"
-        Me.SitioToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
-        Me.SitioToolStripMenuItem1.Text = "Sitio"
-        '
-        'RubroToolStripMenuItem
-        '
-        Me.RubroToolStripMenuItem.Name = "RubroToolStripMenuItem"
-        Me.RubroToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.RubroToolStripMenuItem.Text = "Rubro"
-        '
-        'SubRubroToolStripMenuItem
-        '
-        Me.SubRubroToolStripMenuItem.Name = "SubRubroToolStripMenuItem"
-        Me.SubRubroToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.SubRubroToolStripMenuItem.Text = "Sub Rubro"
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.PictureBox1.Image = Global.Donde_1._0.My.Resources.Resources.ICONODONDE
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 27)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(260, 294)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PictureBox1.TabIndex = 7
+        Me.PictureBox1.TabStop = False
         '
         'F_Donde
         '
@@ -185,8 +185,8 @@ Partial Class F_Donde
         Me.Text = "¿Donde?"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

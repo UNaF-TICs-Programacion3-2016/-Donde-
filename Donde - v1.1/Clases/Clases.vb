@@ -65,8 +65,50 @@ Public Class ConexionBD
     End Function
 
 
+    Public Property CopiarRegistroDS() As DataSet
+        Get
+            Return RegistroDS
+        End Get
+        Set(ByVal value As DataSet)
+            RegistroDS = value
+        End Set
+    End Property
+
 End Class
 
 
+Public Class BuscarDB
+
+    'Atributos
+    Dim OconexionBD As New ConexionBD
+    Dim RegistroDV As New DataView
 
 
+    'Metodos(Funciones y Procedimientos)
+
+    Public Sub BuscarDatos()
+
+        Try
+
+            OconexionBD.Conectar()
+            OconexionBD.Cargar_Tabla("Sitio_cab", "sitio_cab", "ID_SITIO")
+            RegistroDV.Table = OconexionBD.CopiarRegistroDS.Tables(0)
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+    End Sub
+
+
+    Public Property CopiarRegistroDV() As DataView
+        Get
+            Return RegistroDV
+        End Get
+        Set(ByVal value As DataView)
+            RegistroDV = value
+        End Set
+    End Property
+
+
+
+End Class

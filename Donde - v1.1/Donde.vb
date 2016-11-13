@@ -10,13 +10,13 @@ Public Class F_Donde
 
     Private Sub F_Donde_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        If OconexionDB.Conectar Then
-            MsgBox("Conectado")
-            OconexionDB.Cargar_Tabla("Sitio_cab", "sitio_cab", "ID_SITIO")
-            MsgBox("Tabla Cargada con Exito")
-        Else
-            MsgBox("No Conectado")
-        End If
+        'If OconexionDB.Conectar Then
+        '    MsgBox("Conectado")
+        '    OconexionDB.Cargar_Tabla("Sitio_cab", "sitio_cab", "ID_SITIO")
+        '    MsgBox("Tabla Cargada con Exito")
+        'Else
+        '    MsgBox("No Conectado")
+        'End If
 
     End Sub
 
@@ -48,4 +48,8 @@ Public Class F_Donde
     End Sub
 
 
+    Private Sub BuscarToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles BuscarToolStripMenuItem1.Click
+        F_BuscarSitio.Show()
+        Me.Hide()
+    End Sub
 End Class
