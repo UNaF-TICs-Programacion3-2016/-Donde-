@@ -216,13 +216,7 @@
     <None Include="Resources\exit.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\exitt.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Logica\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icono-donde-kevin.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
