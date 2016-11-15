@@ -62,19 +62,19 @@ Partial Class F_Donde
         'CargarToolStripMenuItem
         '
         Me.CargarToolStripMenuItem.Name = "CargarToolStripMenuItem"
-        Me.CargarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CargarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
         Me.CargarToolStripMenuItem.Text = "Agregar"
         '
         'EliminarToolStripMenuItem
         '
         Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
-        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
         Me.EliminarToolStripMenuItem.Text = "Eliminar"
         '
         'BuscarToolStripMenuItem
         '
         Me.BuscarToolStripMenuItem.Name = "BuscarToolStripMenuItem"
-        Me.BuscarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BuscarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
         Me.BuscarToolStripMenuItem.Text = "Buscar"
         '
         'SitioToolStripMenuItem
@@ -88,37 +88,37 @@ Partial Class F_Donde
         '
         Me.AgregarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SitioToolStripMenuItem1, Me.RubroToolStripMenuItem, Me.SubRubroToolStripMenuItem})
         Me.AgregarToolStripMenuItem.Name = "AgregarToolStripMenuItem"
-        Me.AgregarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AgregarToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
         Me.AgregarToolStripMenuItem.Text = "Agregar"
         '
         'SitioToolStripMenuItem1
         '
         Me.SitioToolStripMenuItem1.Name = "SitioToolStripMenuItem1"
-        Me.SitioToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.SitioToolStripMenuItem1.Size = New System.Drawing.Size(129, 22)
         Me.SitioToolStripMenuItem1.Text = "Sitio"
         '
         'RubroToolStripMenuItem
         '
         Me.RubroToolStripMenuItem.Name = "RubroToolStripMenuItem"
-        Me.RubroToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.RubroToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
         Me.RubroToolStripMenuItem.Text = "Rubro"
         '
         'SubRubroToolStripMenuItem
         '
         Me.SubRubroToolStripMenuItem.Name = "SubRubroToolStripMenuItem"
-        Me.SubRubroToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SubRubroToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
         Me.SubRubroToolStripMenuItem.Text = "Sub Rubro"
         '
         'ModificarToolStripMenuItem1
         '
         Me.ModificarToolStripMenuItem1.Name = "ModificarToolStripMenuItem1"
-        Me.ModificarToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.ModificarToolStripMenuItem1.Size = New System.Drawing.Size(125, 22)
         Me.ModificarToolStripMenuItem1.Text = "Modificar"
         '
         'BuscarToolStripMenuItem1
         '
         Me.BuscarToolStripMenuItem1.Name = "BuscarToolStripMenuItem1"
-        Me.BuscarToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.BuscarToolStripMenuItem1.Size = New System.Drawing.Size(125, 22)
         Me.BuscarToolStripMenuItem1.Text = "Buscar"
         '
         'AyudaToolStripMenuItem
