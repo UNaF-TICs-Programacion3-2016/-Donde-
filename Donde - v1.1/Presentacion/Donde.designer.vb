@@ -25,19 +25,17 @@ Partial Class F_Donde
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.PersonaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CargarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ModificarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BuscarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SitioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AgregarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ModificarToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EliminarToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BuscarToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AcercaDeDondeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SitioToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.RubroToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SubRubroToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ModificarToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BuscarToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AcercaDeDondeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1.SuspendLayout()
@@ -56,7 +54,7 @@ Partial Class F_Donde
         '
         'PersonaToolStripMenuItem
         '
-        Me.PersonaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CargarToolStripMenuItem, Me.ModificarToolStripMenuItem, Me.EliminarToolStripMenuItem, Me.BuscarToolStripMenuItem})
+        Me.PersonaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CargarToolStripMenuItem, Me.EliminarToolStripMenuItem, Me.BuscarToolStripMenuItem})
         Me.PersonaToolStripMenuItem.Name = "PersonaToolStripMenuItem"
         Me.PersonaToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
         Me.PersonaToolStripMenuItem.Text = "Persona"
@@ -64,30 +62,24 @@ Partial Class F_Donde
         'CargarToolStripMenuItem
         '
         Me.CargarToolStripMenuItem.Name = "CargarToolStripMenuItem"
-        Me.CargarToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
+        Me.CargarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.CargarToolStripMenuItem.Text = "Agregar"
-        '
-        'ModificarToolStripMenuItem
-        '
-        Me.ModificarToolStripMenuItem.Name = "ModificarToolStripMenuItem"
-        Me.ModificarToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
-        Me.ModificarToolStripMenuItem.Text = "Modificar"
         '
         'EliminarToolStripMenuItem
         '
         Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
-        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.EliminarToolStripMenuItem.Text = "Eliminar"
         '
         'BuscarToolStripMenuItem
         '
         Me.BuscarToolStripMenuItem.Name = "BuscarToolStripMenuItem"
-        Me.BuscarToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
+        Me.BuscarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.BuscarToolStripMenuItem.Text = "Buscar"
         '
         'SitioToolStripMenuItem
         '
-        Me.SitioToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarToolStripMenuItem, Me.ModificarToolStripMenuItem1, Me.EliminarToolStripMenuItem1, Me.BuscarToolStripMenuItem1})
+        Me.SitioToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarToolStripMenuItem, Me.ModificarToolStripMenuItem1, Me.BuscarToolStripMenuItem1})
         Me.SitioToolStripMenuItem.Name = "SitioToolStripMenuItem"
         Me.SitioToolStripMenuItem.Size = New System.Drawing.Size(42, 20)
         Me.SitioToolStripMenuItem.Text = "Sitio"
@@ -99,17 +91,29 @@ Partial Class F_Donde
         Me.AgregarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.AgregarToolStripMenuItem.Text = "Agregar"
         '
+        'SitioToolStripMenuItem1
+        '
+        Me.SitioToolStripMenuItem1.Name = "SitioToolStripMenuItem1"
+        Me.SitioToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.SitioToolStripMenuItem1.Text = "Sitio"
+        '
+        'RubroToolStripMenuItem
+        '
+        Me.RubroToolStripMenuItem.Name = "RubroToolStripMenuItem"
+        Me.RubroToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.RubroToolStripMenuItem.Text = "Rubro"
+        '
+        'SubRubroToolStripMenuItem
+        '
+        Me.SubRubroToolStripMenuItem.Name = "SubRubroToolStripMenuItem"
+        Me.SubRubroToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SubRubroToolStripMenuItem.Text = "Sub Rubro"
+        '
         'ModificarToolStripMenuItem1
         '
         Me.ModificarToolStripMenuItem1.Name = "ModificarToolStripMenuItem1"
         Me.ModificarToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.ModificarToolStripMenuItem1.Text = "Modificar"
-        '
-        'EliminarToolStripMenuItem1
-        '
-        Me.EliminarToolStripMenuItem1.Name = "EliminarToolStripMenuItem1"
-        Me.EliminarToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
-        Me.EliminarToolStripMenuItem1.Text = "Eliminar"
         '
         'BuscarToolStripMenuItem1
         '
@@ -129,24 +133,6 @@ Partial Class F_Donde
         Me.AcercaDeDondeToolStripMenuItem.Name = "AcercaDeDondeToolStripMenuItem"
         Me.AcercaDeDondeToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
         Me.AcercaDeDondeToolStripMenuItem.Text = "Acerca de ¿Donde ?"
-        '
-        'SitioToolStripMenuItem1
-        '
-        Me.SitioToolStripMenuItem1.Name = "SitioToolStripMenuItem1"
-        Me.SitioToolStripMenuItem1.Size = New System.Drawing.Size(129, 22)
-        Me.SitioToolStripMenuItem1.Text = "Sitio"
-        '
-        'RubroToolStripMenuItem
-        '
-        Me.RubroToolStripMenuItem.Name = "RubroToolStripMenuItem"
-        Me.RubroToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
-        Me.RubroToolStripMenuItem.Text = "Rubro"
-        '
-        'SubRubroToolStripMenuItem
-        '
-        Me.SubRubroToolStripMenuItem.Name = "SubRubroToolStripMenuItem"
-        Me.SubRubroToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
-        Me.SubRubroToolStripMenuItem.Text = "Sub Rubro"
         '
         'PictureBox3
         '
@@ -194,13 +180,11 @@ Partial Class F_Donde
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents PersonaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CargarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ModificarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SitioToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents EliminarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents BuscarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AgregarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ModificarToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents EliminarToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents BuscarToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents AyudaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem

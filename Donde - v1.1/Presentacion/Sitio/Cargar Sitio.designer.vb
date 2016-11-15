@@ -48,6 +48,10 @@ Partial Class F_CargaSitio
         Me.BtnAgregarC = New System.Windows.Forms.Button()
         Me.BtnBuscC = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.TxtID = New System.Windows.Forms.TextBox()
+        Me.LblID = New System.Windows.Forms.Label()
+        Me.BtnModS = New System.Windows.Forms.Button()
+        Me.GBEditar = New System.Windows.Forms.GroupBox()
         Me.GB_CPD.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.TabPCarga.SuspendLayout()
@@ -55,12 +59,16 @@ Partial Class F_CargaSitio
         CType(Me.DGDireccion, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPContacto.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GBEditar.SuspendLayout()
         Me.SuspendLayout()
         '
         'GB_CPD
         '
         Me.GB_CPD.BackColor = System.Drawing.Color.LightSteelBlue
         Me.GB_CPD.BackgroundImage = CType(resources.GetObject("GB_CPD.BackgroundImage"), System.Drawing.Image)
+        Me.GB_CPD.Controls.Add(Me.GBEditar)
+        Me.GB_CPD.Controls.Add(Me.LblID)
+        Me.GB_CPD.Controls.Add(Me.TxtID)
         Me.GB_CPD.Controls.Add(Me.Lbl_EstadoCivil)
         Me.GB_CPD.Controls.Add(Me.TxtNombreS)
         Me.GB_CPD.Controls.Add(Me.Lbl_Sexo)
@@ -69,9 +77,10 @@ Partial Class F_CargaSitio
         Me.GB_CPD.Controls.Add(Me.DtpFAlta)
         Me.GB_CPD.Controls.Add(Me.CmbRubro)
         Me.GB_CPD.Controls.Add(Me.Lbl_FNacimiento)
+        Me.GB_CPD.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GB_CPD.Location = New System.Drawing.Point(0, 2)
         Me.GB_CPD.Name = "GB_CPD"
-        Me.GB_CPD.Size = New System.Drawing.Size(593, 121)
+        Me.GB_CPD.Size = New System.Drawing.Size(593, 154)
         Me.GB_CPD.TabIndex = 30
         Me.GB_CPD.TabStop = False
         Me.GB_CPD.Text = "Carga de Datos"
@@ -81,7 +90,7 @@ Partial Class F_CargaSitio
         Me.Lbl_EstadoCivil.AutoSize = True
         Me.Lbl_EstadoCivil.BackColor = System.Drawing.Color.Transparent
         Me.Lbl_EstadoCivil.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lbl_EstadoCivil.Location = New System.Drawing.Point(238, 68)
+        Me.Lbl_EstadoCivil.Location = New System.Drawing.Point(238, 104)
         Me.Lbl_EstadoCivil.Name = "Lbl_EstadoCivil"
         Me.Lbl_EstadoCivil.Size = New System.Drawing.Size(67, 13)
         Me.Lbl_EstadoCivil.TabIndex = 35
@@ -89,7 +98,7 @@ Partial Class F_CargaSitio
         '
         'TxtNombreS
         '
-        Me.TxtNombreS.Location = New System.Drawing.Point(12, 45)
+        Me.TxtNombreS.Location = New System.Drawing.Point(12, 81)
         Me.TxtNombreS.Name = "TxtNombreS"
         Me.TxtNombreS.Size = New System.Drawing.Size(293, 20)
         Me.TxtNombreS.TabIndex = 13
@@ -99,7 +108,7 @@ Partial Class F_CargaSitio
         Me.Lbl_Sexo.AutoSize = True
         Me.Lbl_Sexo.BackColor = System.Drawing.Color.Transparent
         Me.Lbl_Sexo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lbl_Sexo.Location = New System.Drawing.Point(9, 68)
+        Me.Lbl_Sexo.Location = New System.Drawing.Point(9, 104)
         Me.Lbl_Sexo.Name = "Lbl_Sexo"
         Me.Lbl_Sexo.Size = New System.Drawing.Size(41, 13)
         Me.Lbl_Sexo.TabIndex = 32
@@ -110,7 +119,7 @@ Partial Class F_CargaSitio
         Me.Lbl_Nombre.AutoSize = True
         Me.Lbl_Nombre.BackColor = System.Drawing.Color.Transparent
         Me.Lbl_Nombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lbl_Nombre.Location = New System.Drawing.Point(9, 29)
+        Me.Lbl_Nombre.Location = New System.Drawing.Point(6, 65)
         Me.Lbl_Nombre.Name = "Lbl_Nombre"
         Me.Lbl_Nombre.Size = New System.Drawing.Size(66, 13)
         Me.Lbl_Nombre.TabIndex = 29
@@ -120,7 +129,7 @@ Partial Class F_CargaSitio
         '
         Me.CmbSRubro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CmbSRubro.FormattingEnabled = True
-        Me.CmbSRubro.Location = New System.Drawing.Point(241, 84)
+        Me.CmbSRubro.Location = New System.Drawing.Point(241, 120)
         Me.CmbSRubro.Name = "CmbSRubro"
         Me.CmbSRubro.Size = New System.Drawing.Size(209, 21)
         Me.CmbSRubro.TabIndex = 34
@@ -128,7 +137,7 @@ Partial Class F_CargaSitio
         'DtpFAlta
         '
         Me.DtpFAlta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DtpFAlta.Location = New System.Drawing.Point(350, 45)
+        Me.DtpFAlta.Location = New System.Drawing.Point(350, 81)
         Me.DtpFAlta.Name = "DtpFAlta"
         Me.DtpFAlta.Size = New System.Drawing.Size(100, 20)
         Me.DtpFAlta.TabIndex = 20
@@ -137,7 +146,7 @@ Partial Class F_CargaSitio
         '
         Me.CmbRubro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CmbRubro.FormattingEnabled = True
-        Me.CmbRubro.Location = New System.Drawing.Point(12, 84)
+        Me.CmbRubro.Location = New System.Drawing.Point(12, 120)
         Me.CmbRubro.Name = "CmbRubro"
         Me.CmbRubro.Size = New System.Drawing.Size(209, 21)
         Me.CmbRubro.TabIndex = 33
@@ -147,7 +156,7 @@ Partial Class F_CargaSitio
         Me.Lbl_FNacimiento.AutoSize = True
         Me.Lbl_FNacimiento.BackColor = System.Drawing.Color.Transparent
         Me.Lbl_FNacimiento.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lbl_FNacimiento.Location = New System.Drawing.Point(347, 29)
+        Me.Lbl_FNacimiento.Location = New System.Drawing.Point(347, 65)
         Me.Lbl_FNacimiento.Name = "Lbl_FNacimiento"
         Me.Lbl_FNacimiento.Size = New System.Drawing.Size(86, 13)
         Me.Lbl_FNacimiento.TabIndex = 25
@@ -160,7 +169,8 @@ Partial Class F_CargaSitio
         Me.GroupBox1.Controls.Add(Me.BtnSCancelar)
         Me.GroupBox1.Controls.Add(Me.BtnSAceptar)
         Me.GroupBox1.Controls.Add(Me.TabPCarga)
-        Me.GroupBox1.Location = New System.Drawing.Point(0, 129)
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Location = New System.Drawing.Point(0, 162)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(593, 259)
         Me.GroupBox1.TabIndex = 33
@@ -168,18 +178,18 @@ Partial Class F_CargaSitio
         '
         'BtnSCancelar
         '
-        Me.BtnSCancelar.Location = New System.Drawing.Point(434, 228)
+        Me.BtnSCancelar.Location = New System.Drawing.Point(391, 227)
         Me.BtnSCancelar.Name = "BtnSCancelar"
-        Me.BtnSCancelar.Size = New System.Drawing.Size(60, 25)
+        Me.BtnSCancelar.Size = New System.Drawing.Size(77, 25)
         Me.BtnSCancelar.TabIndex = 27
         Me.BtnSCancelar.Text = "Cancelar"
         Me.BtnSCancelar.UseVisualStyleBackColor = True
         '
         'BtnSAceptar
         '
-        Me.BtnSAceptar.Location = New System.Drawing.Point(518, 228)
+        Me.BtnSAceptar.Location = New System.Drawing.Point(474, 227)
         Me.BtnSAceptar.Name = "BtnSAceptar"
-        Me.BtnSAceptar.Size = New System.Drawing.Size(63, 26)
+        Me.BtnSAceptar.Size = New System.Drawing.Size(77, 26)
         Me.BtnSAceptar.TabIndex = 26
         Me.BtnSAceptar.Text = "Aceptar"
         Me.BtnSAceptar.UseVisualStyleBackColor = True
@@ -314,11 +324,50 @@ Partial Class F_CargaSitio
         Me.DataGridView1.Size = New System.Drawing.Size(553, 139)
         Me.DataGridView1.TabIndex = 0
         '
+        'TxtID
+        '
+        Me.TxtID.Location = New System.Drawing.Point(12, 37)
+        Me.TxtID.Name = "TxtID"
+        Me.TxtID.Size = New System.Drawing.Size(46, 20)
+        Me.TxtID.TabIndex = 36
+        '
+        'LblID
+        '
+        Me.LblID.AutoSize = True
+        Me.LblID.BackColor = System.Drawing.Color.Transparent
+        Me.LblID.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblID.Location = New System.Drawing.Point(9, 21)
+        Me.LblID.Name = "LblID"
+        Me.LblID.Size = New System.Drawing.Size(20, 13)
+        Me.LblID.TabIndex = 37
+        Me.LblID.Text = "ID"
+        '
+        'BtnModS
+        '
+        Me.BtnModS.Location = New System.Drawing.Point(15, 19)
+        Me.BtnModS.Name = "BtnModS"
+        Me.BtnModS.Size = New System.Drawing.Size(77, 24)
+        Me.BtnModS.TabIndex = 12
+        Me.BtnModS.Text = "Modificar"
+        Me.BtnModS.UseVisualStyleBackColor = True
+        '
+        'GBEditar
+        '
+        Me.GBEditar.BackgroundImage = CType(resources.GetObject("GBEditar.BackgroundImage"), System.Drawing.Image)
+        Me.GBEditar.Controls.Add(Me.BtnModS)
+        Me.GBEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GBEditar.Location = New System.Drawing.Point(105, 21)
+        Me.GBEditar.Name = "GBEditar"
+        Me.GBEditar.Size = New System.Drawing.Size(200, 54)
+        Me.GBEditar.TabIndex = 38
+        Me.GBEditar.TabStop = False
+        Me.GBEditar.Text = "Editar Sitio"
+        '
         'F_CargaSitio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(593, 387)
+        Me.ClientSize = New System.Drawing.Size(594, 421)
         Me.Controls.Add(Me.GB_CPD)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "F_CargaSitio"
@@ -331,6 +380,7 @@ Partial Class F_CargaSitio
         CType(Me.DGDireccion, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPContacto.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GBEditar.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -360,4 +410,8 @@ Partial Class F_CargaSitio
     Friend WithEvents BtnBuscC As System.Windows.Forms.Button
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents LblID As System.Windows.Forms.Label
+    Friend WithEvents TxtID As System.Windows.Forms.TextBox
+    Friend WithEvents BtnModS As System.Windows.Forms.Button
+    Friend WithEvents GBEditar As System.Windows.Forms.GroupBox
 End Class

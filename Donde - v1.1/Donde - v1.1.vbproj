@@ -117,23 +117,36 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Sitio\Buscar_Sitio.Designer.vb">
+    <Compile Include="Funciones\InsertarDatos.vb" />
+    <Compile Include="Presentacion\Persona\Agregar Direccion.Designer.vb">
+      <DependentUpon>Agregar Direccion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Persona\Agregar Direccion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Persona\Cargar Persona.Designer.vb">
+      <DependentUpon>Cargar Persona.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Persona\Cargar Persona.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Sitio\Buscar_Sitio.Designer.vb">
       <DependentUpon>Buscar_Sitio.vb</DependentUpon>
     </Compile>
-    <Compile Include="Sitio\Buscar_Sitio.vb">
+    <Compile Include="Presentacion\Sitio\Buscar_Sitio.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sitio\Cargar Sitio.designer.vb">
+    <Compile Include="Presentacion\Sitio\Cargar Sitio.designer.vb">
       <DependentUpon>Cargar Sitio.vb</DependentUpon>
     </Compile>
-    <Compile Include="Sitio\Cargar Sitio.vb">
+    <Compile Include="Presentacion\Sitio\Cargar Sitio.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Clases\Clases.vb" />
-    <Compile Include="Donde.designer.vb">
+    <Compile Include="Funciones\Clases.vb" />
+    <Compile Include="Presentacion\Donde.designer.vb">
       <DependentUpon>Donde.vb</DependentUpon>
     </Compile>
-    <Compile Include="Donde.vb">
+    <Compile Include="Presentacion\Donde.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -151,21 +164,27 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Sitio\Cargar Rubros.Designer.vb">
+    <Compile Include="Presentacion\Sitio\Cargar Rubros.Designer.vb">
       <DependentUpon>Cargar Rubros.vb</DependentUpon>
     </Compile>
-    <Compile Include="Sitio\Cargar Rubros.vb">
+    <Compile Include="Presentacion\Sitio\Cargar Rubros.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Sitio\Buscar_Sitio.resx">
+    <EmbeddedResource Include="Presentacion\Persona\Agregar Direccion.resx">
+      <DependentUpon>Agregar Direccion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Persona\Cargar Persona.resx">
+      <DependentUpon>Cargar Persona.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Sitio\Buscar_Sitio.resx">
       <DependentUpon>Buscar_Sitio.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sitio\Cargar Sitio.resx">
+    <EmbeddedResource Include="Presentacion\Sitio\Cargar Sitio.resx">
       <DependentUpon>Cargar Sitio.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Donde.resx">
+    <EmbeddedResource Include="Presentacion\Donde.resx">
       <DependentUpon>Donde.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -174,7 +193,7 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sitio\Cargar Rubros.resx">
+    <EmbeddedResource Include="Presentacion\Sitio\Cargar Rubros.resx">
       <DependentUpon>Cargar Rubros.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
@@ -198,6 +217,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\exitt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Logica\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

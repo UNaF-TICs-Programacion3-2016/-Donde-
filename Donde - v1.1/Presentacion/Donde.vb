@@ -1,9 +1,12 @@
 ﻿
-
-
+Public Enum TipoAccion As Byte 'Enumeracion para selecionar el tipo de accion a realizar por el usuario
+    Alta = 1
+    Modificacion = 2
+    Baja = 3
+End Enum
 Public Class F_Donde
     'Atributos
-
+    Friend Accion As TipoAccion
     Dim OconexionDB As New ConexionBD
 
     'Metodos (unciones y Procedimientos)
@@ -50,6 +53,16 @@ Public Class F_Donde
 
     Private Sub BuscarToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles BuscarToolStripMenuItem1.Click
         F_BuscarSitio.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub SitioToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles SitioToolStripMenuItem1.Click
+        F_CargaSitio.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub CargarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CargarToolStripMenuItem.Click
+        F_CargaPersona.Show()
         Me.Hide()
     End Sub
 End Class

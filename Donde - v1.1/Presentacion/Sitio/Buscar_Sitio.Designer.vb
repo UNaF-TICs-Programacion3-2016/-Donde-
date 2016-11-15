@@ -41,7 +41,7 @@ Partial Class F_BuscarSitio
         'DGVBuscarS
         '
         Me.DGVBuscarS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGVBuscarS.Location = New System.Drawing.Point(15, 33)
+        Me.DGVBuscarS.Location = New System.Drawing.Point(15, 29)
         Me.DGVBuscarS.Name = "DGVBuscarS"
         Me.DGVBuscarS.Size = New System.Drawing.Size(365, 150)
         Me.DGVBuscarS.TabIndex = 0
@@ -62,7 +62,7 @@ Partial Class F_BuscarSitio
         Me.GBBuscarS.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GBBuscarS.Location = New System.Drawing.Point(6, 41)
         Me.GBBuscarS.Name = "GBBuscarS"
-        Me.GBBuscarS.Size = New System.Drawing.Size(386, 195)
+        Me.GBBuscarS.Size = New System.Drawing.Size(398, 195)
         Me.GBBuscarS.TabIndex = 2
         Me.GBBuscarS.TabStop = False
         Me.GBBuscarS.Text = "Resultado de la Busqueda"
@@ -86,31 +86,31 @@ Partial Class F_BuscarSitio
         'DirreccionToolStripMenuItem
         '
         Me.DirreccionToolStripMenuItem.Name = "DirreccionToolStripMenuItem"
-        Me.DirreccionToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DirreccionToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
         Me.DirreccionToolStripMenuItem.Text = "Nombre"
         '
         'DireccionToolStripMenuItem
         '
         Me.DireccionToolStripMenuItem.Name = "DireccionToolStripMenuItem"
-        Me.DireccionToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DireccionToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
         Me.DireccionToolStripMenuItem.Text = "Direccion"
         '
         'DueñoToolStripMenuItem
         '
         Me.DueñoToolStripMenuItem.Name = "DueñoToolStripMenuItem"
-        Me.DueñoToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DueñoToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
         Me.DueñoToolStripMenuItem.Text = "Dueño"
         '
         'RubroToolStripMenuItem
         '
         Me.RubroToolStripMenuItem.Name = "RubroToolStripMenuItem"
-        Me.RubroToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.RubroToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
         Me.RubroToolStripMenuItem.Text = "Rubro"
         '
         'SubRubroToolStripMenuItem
         '
         Me.SubRubroToolStripMenuItem.Name = "SubRubroToolStripMenuItem"
-        Me.SubRubroToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SubRubroToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
         Me.SubRubroToolStripMenuItem.Text = "Sub Rubro"
         '
         'F_BuscarSitio

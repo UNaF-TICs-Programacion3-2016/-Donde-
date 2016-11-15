@@ -22,3 +22,5 @@ C:\Users\DARIO\Documents\-Donde-\Donde - v1.1\obj\x86\Debug\Donde_1._0.Resources
 C:\Users\DARIO\Documents\-Donde-\Donde - v1.1\obj\x86\Debug\Donde_1._0.F_CargaRubros.resources
 C:\Users\DARIO\Documents\-Donde-\Donde - v1.1\obj\x86\Debug\Donde - v1.1.vbproj.GenerateResource.Cache
 C:\Users\DARIO\Documents\-Donde-\Donde - v1.1\obj\x86\Debug\Donde_1._0.F_BuscarSitio.resources
+C:\Users\DARIO\Documents\-Donde-\Donde - v1.1\obj\x86\Debug\Donde_1._0.F_Agregar_Dir.resources
+C:\Users\DARIO\Documents\-Donde-\Donde - v1.1\obj\x86\Debug\Donde_1._0.F_CargaPersona.resources
