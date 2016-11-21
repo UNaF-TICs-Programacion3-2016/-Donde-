@@ -2,16 +2,13 @@
 
 Public Class F_BuscarSitio
 
-    Dim OBuscarSitio As New BuscarDB
-
+    'Dim oBuscarBD As New BuscarDB
+    Dim oSitios As New Sitios
     Private Sub BtnBuscar_Click(sender As Object, e As EventArgs) Handles BtnBuscar.Click
-
-        OBuscarSitio.BuscarDatos()
-        DGVBuscarS.DataSource = OBuscarSitio.CopiarRegistroDV()
-
+        oSitios.ListarSitios(DGVBuscarS)
     End Sub
 
-    
+
     Private Sub DGVBuscarS_DoubleClick(sender As Object, e As EventArgs) Handles DGVBuscarS.DoubleClick
 
         Try

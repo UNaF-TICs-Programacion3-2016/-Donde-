@@ -51,6 +51,8 @@ Partial Class F_Agregar_Dir
         Me.CmbProvincia = New System.Windows.Forms.ComboBox()
         Me.CmbPais = New System.Windows.Forms.ComboBox()
         Me.GBmd = New System.Windows.Forms.GroupBox()
+        Me.BtnCancelarS = New System.Windows.Forms.Button()
+        Me.BtnAceptarS = New System.Windows.Forms.Button()
         Me.BtnCancelarP = New System.Windows.Forms.Button()
         Me.BtnAceptarP = New System.Windows.Forms.Button()
         Me.GB_CDPer.SuspendLayout()
@@ -340,6 +342,8 @@ Partial Class F_Agregar_Dir
         'GBmd
         '
         Me.GBmd.BackgroundImage = CType(resources.GetObject("GBmd.BackgroundImage"), System.Drawing.Image)
+        Me.GBmd.Controls.Add(Me.BtnCancelarS)
+        Me.GBmd.Controls.Add(Me.BtnAceptarS)
         Me.GBmd.Controls.Add(Me.BtnCancelarP)
         Me.GBmd.Controls.Add(Me.BtnAceptarP)
         Me.GBmd.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -348,6 +352,24 @@ Partial Class F_Agregar_Dir
         Me.GBmd.Size = New System.Drawing.Size(593, 54)
         Me.GBmd.TabIndex = 38
         Me.GBmd.TabStop = False
+        '
+        'BtnCancelarS
+        '
+        Me.BtnCancelarS.Location = New System.Drawing.Point(26, 19)
+        Me.BtnCancelarS.Name = "BtnCancelarS"
+        Me.BtnCancelarS.Size = New System.Drawing.Size(77, 24)
+        Me.BtnCancelarS.TabIndex = 15
+        Me.BtnCancelarS.Text = "Cancelar"
+        Me.BtnCancelarS.UseVisualStyleBackColor = True
+        '
+        'BtnAceptarS
+        '
+        Me.BtnAceptarS.Location = New System.Drawing.Point(109, 19)
+        Me.BtnAceptarS.Name = "BtnAceptarS"
+        Me.BtnAceptarS.Size = New System.Drawing.Size(77, 24)
+        Me.BtnAceptarS.TabIndex = 14
+        Me.BtnAceptarS.Text = "Aceptar"
+        Me.BtnAceptarS.UseVisualStyleBackColor = True
         '
         'BtnCancelarP
         '
@@ -371,7 +393,7 @@ Partial Class F_Agregar_Dir
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(596, 281)
+        Me.ClientSize = New System.Drawing.Size(596, 279)
         Me.Controls.Add(Me.GB_CDPer)
         Me.Controls.Add(Me.GBmd)
         Me.Name = "F_Agregar_Dir"
@@ -412,4 +434,6 @@ Partial Class F_Agregar_Dir
     Friend WithEvents TxtMza As System.Windows.Forms.TextBox
     Friend WithEvents TxtCasa As System.Windows.Forms.TextBox
     Friend WithEvents BtnCancelarP As System.Windows.Forms.Button
+    Friend WithEvents BtnCancelarS As System.Windows.Forms.Button
+    Friend WithEvents BtnAceptarS As System.Windows.Forms.Button
 End Class

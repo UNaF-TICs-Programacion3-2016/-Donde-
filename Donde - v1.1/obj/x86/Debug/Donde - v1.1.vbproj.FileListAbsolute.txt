@@ -24,3 +24,57 @@ C:\Users\DARIO\Documents\-Donde-\Donde - v1.1\obj\x86\Debug\Donde - v1.1.vbproj.
 C:\Users\DARIO\Documents\-Donde-\Donde - v1.1\obj\x86\Debug\Donde_1._0.F_BuscarSitio.resources
 C:\Users\DARIO\Documents\-Donde-\Donde - v1.1\obj\x86\Debug\Donde_1._0.F_Agregar_Dir.resources
 C:\Users\DARIO\Documents\-Donde-\Donde - v1.1\obj\x86\Debug\Donde_1._0.F_CargaPersona.resources
+C:\Users\Joel Britez\Source\Repos\-Donde-\Donde - v1.1\bin\x86\Debug\Donde - v1.1.exe.config
+C:\Users\Joel Britez\Source\Repos\-Donde-\Donde - v1.1\obj\x86\Debug\Donde - v1.1.exe
+C:\Users\Joel Britez\Source\Repos\-Donde-\Donde - v1.1\obj\x86\Debug\Donde - v1.1.xml
+C:\Users\Joel Britez\Source\Repos\-Donde-\Donde - v1.1\obj\x86\Debug\Donde - v1.1.pdb
+C:\Users\Joel Britez\Source\Repos\-Donde-\Donde - v1.1\bin\x86\Debug\Donde - v1.1.exe
+C:\Users\Joel Britez\Source\Repos\-Donde-\Donde - v1.1\bin\x86\Debug\Donde - v1.1.pdb
+C:\Users\Joel Britez\Source\Repos\-Donde-\Donde - v1.1\bin\x86\Debug\Donde - v1.1.xml
+C:\Users\Joel Britez\Source\Repos\-Donde-\Donde - v1.1\bin\x86\Debug\Oracle.DataAccess.dll
+C:\Users\Joel Britez\Source\Repos\-Donde-\Donde - v1.1\obj\x86\Debug\Donde - v1.1.vbprojResolveAssemblyReference.cache
+C:\Users\Joel Britez\Source\Repos\-Donde-\Donde - v1.1\obj\x86\Debug\Donde_1._0.F_Agregar_Dir.resources
+C:\Users\Joel Britez\Source\Repos\-Donde-\Donde - v1.1\obj\x86\Debug\Donde_1._0.F_CargaPersona.resources
+C:\Users\Joel Britez\Source\Repos\-Donde-\Donde - v1.1\obj\x86\Debug\Donde_1._0.F_BuscarSitio.resources
+C:\Users\Joel Britez\Source\Repos\-Donde-\Donde - v1.1\obj\x86\Debug\Donde_1._0.F_CargaSitio.resources
+C:\Users\Joel Britez\Source\Repos\-Donde-\Donde - v1.1\obj\x86\Debug\Donde_1._0.F_Donde.resources
+C:\Users\Joel Britez\Source\Repos\-Donde-\Donde - v1.1\obj\x86\Debug\Donde_1._0.Resources.resources
+C:\Users\Joel Britez\Source\Repos\-Donde-\Donde - v1.1\obj\x86\Debug\Donde_1._0.F_CargaRubros.resources
+C:\Users\Joel Britez\Source\Repos\-Donde-\Donde - v1.1\obj\x86\Debug\Donde - v1.1.vbproj.GenerateResource.Cache
+C:\Users\JJBM\Source\Repos\-Donde-4\Donde - v1.1\bin\x86\Debug\Donde - v1.1.exe.config
+C:\Users\JJBM\Source\Repos\-Donde-4\Donde - v1.1\obj\x86\Debug\Donde - v1.1.exe
+C:\Users\JJBM\Source\Repos\-Donde-4\Donde - v1.1\obj\x86\Debug\Donde - v1.1.xml
+C:\Users\JJBM\Source\Repos\-Donde-4\Donde - v1.1\obj\x86\Debug\Donde - v1.1.pdb
+C:\Users\JJBM\Source\Repos\-Donde-4\Donde - v1.1\bin\x86\Debug\Donde - v1.1.exe
+C:\Users\JJBM\Source\Repos\-Donde-4\Donde - v1.1\bin\x86\Debug\Donde - v1.1.pdb
+C:\Users\JJBM\Source\Repos\-Donde-4\Donde - v1.1\bin\x86\Debug\Donde - v1.1.xml
+C:\Users\JJBM\Source\Repos\-Donde-4\Donde - v1.1\bin\x86\Debug\Oracle.DataAccess.dll
+C:\Users\JJBM\Source\Repos\-Donde-4\Donde - v1.1\obj\x86\Debug\Donde - v1.1.vbprojResolveAssemblyReference.cache
+C:\Users\JJBM\Source\Repos\-Donde-4\Donde - v1.1\obj\x86\Debug\Donde_1._0.F_Agregar_Dir.resources
+C:\Users\JJBM\Source\Repos\-Donde-4\Donde - v1.1\obj\x86\Debug\Donde_1._0.F_CargaPersona.resources
+C:\Users\JJBM\Source\Repos\-Donde-4\Donde - v1.1\obj\x86\Debug\Donde_1._0.F_BuscarSitio.resources
+C:\Users\JJBM\Source\Repos\-Donde-4\Donde - v1.1\obj\x86\Debug\Donde_1._0.F_CargaSitio.resources
+C:\Users\JJBM\Source\Repos\-Donde-4\Donde - v1.1\obj\x86\Debug\Donde_1._0.F_Donde.resources
+C:\Users\JJBM\Source\Repos\-Donde-4\Donde - v1.1\obj\x86\Debug\Donde_1._0.Resources.resources
+C:\Users\JJBM\Source\Repos\-Donde-4\Donde - v1.1\obj\x86\Debug\Donde_1._0.F_CargaRubros.resources
+C:\Users\JJBM\Source\Repos\-Donde-4\Donde - v1.1\obj\x86\Debug\Donde - v1.1.vbproj.GenerateResource.Cache
+D:\-Donde-4\Donde - v1.1\bin\x86\Debug\Donde - v1.1.exe.config
+D:\-Donde-4\Donde - v1.1\obj\x86\Debug\Donde - v1.1.exe
+D:\-Donde-4\Donde - v1.1\obj\x86\Debug\Donde - v1.1.xml
+D:\-Donde-4\Donde - v1.1\obj\x86\Debug\Donde - v1.1.pdb
+D:\-Donde-4\Donde - v1.1\bin\x86\Debug\Donde - v1.1.exe
+D:\-Donde-4\Donde - v1.1\bin\x86\Debug\Donde - v1.1.pdb
+D:\-Donde-4\Donde - v1.1\bin\x86\Debug\Donde - v1.1.xml
+D:\-Donde-4\Donde - v1.1\obj\x86\Debug\Donde - v1.1.vbprojResolveAssemblyReference.cache
+D:\-Donde-4\Donde - v1.1\obj\x86\Debug\Donde_1._0.F_Agregar_Dir.resources
+D:\-Donde-4\Donde - v1.1\obj\x86\Debug\Donde_1._0.F_CargaPersona.resources
+D:\-Donde-4\Donde - v1.1\obj\x86\Debug\Donde_1._0.F_BuscarSitio.resources
+D:\-Donde-4\Donde - v1.1\obj\x86\Debug\Donde_1._0.F_CargaSitio.resources
+D:\-Donde-4\Donde - v1.1\obj\x86\Debug\Donde_1._0.F_Donde.resources
+D:\-Donde-4\Donde - v1.1\obj\x86\Debug\Donde_1._0.Resources.resources
+D:\-Donde-4\Donde - v1.1\obj\x86\Debug\Donde_1._0.F_CargaRubros.resources
+D:\-Donde-4\Donde - v1.1\obj\x86\Debug\Donde - v1.1.vbproj.GenerateResource.Cache
+C:\Users\DARIO AGUILERA\Source\Repos\-Donde-4\Donde - v1.1\bin\x86\Debug\Donde - v1.1.exe.config
+C:\Users\DARIO AGUILERA\Source\Repos\-Donde-4\Donde - v1.1\obj\x86\Debug\Donde - v1.1.exe
+C:\Users\DARIO AGUILERA\Source\Repos\-Donde-4\Donde - v1.1\obj\x86\Debug\Donde - v1.1.xml
+C:\Users\DARIO AGUILERA\Source\Repos\-Donde-4\Donde - v1.1\obj\x86\Debug\Donde - v1.1.pdb

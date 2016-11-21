@@ -1,11 +1,7 @@
 ﻿
 
 Public Class F_CargaSitio
-
-
-
-
-
+    Dim oSitios As New Sitios
 
     Private Sub BtnSCancelar_Click(sender As Object, e As EventArgs) Handles BtnSCancelar.Click
         Me.Close()
@@ -13,28 +9,28 @@ Public Class F_CargaSitio
     End Sub
 
     Private Sub F_CargaSitio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Dim OConecion As New ConexionBD
-
-        'OConecion.Conectar()
-        'OConecion.Cargar_Tabla("Sitio_cab", "sitio_cab", "ID_SITIO")
-
-
+        oSitios.Cargar_Tabla()
         BtnModS.Visible = False
         GBEditar.Visible = False
     End Sub
 
     Private Sub BtnSAceptar_Click(sender As Object, e As EventArgs) Handles BtnSAceptar.Click
-        'Dim OInsertarDatos As New InsertarDatos
-        'Dim Datos As New Datos_CEstado
+        oSitios.Agregar_Sitio()
 
-        'Datos.CEstadoStr1 = TxtNombreS.Text
-        'Datos.CEstadoDtp1 = DtpFAlta
+    End Sub
 
-        'If OInsertarDatos.InsertarDatos(Datos) Then
-        '    MsgBox("Datos Guardados")
-        'Else
-        '    MsgBox("Datos No Guardados")
-        'End If
+    Private Sub BtnAgregarD_Click(sender As Object, e As EventArgs) Handles BtnAgregarD.Click
+        F_Agregar_Dir.Show()
+        F_Agregar_Dir.BtnAceptarP.Visible = False
+        F_Agregar_Dir.BtnCancelarP.Visible = False
+        F_Agregar_Dir.BtnAceptarS.Visible = True
+        F_Agregar_Dir.BtnCancelarS.Visible = True
+
+        Me.Hide()
+    End Sub
+
+    Private Sub BtnModS_Click(sender As Object, e As EventArgs) Handles BtnModS.Click
+
 
     End Sub
 End Class

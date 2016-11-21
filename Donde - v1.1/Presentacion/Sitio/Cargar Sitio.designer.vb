@@ -24,6 +24,10 @@ Partial Class F_CargaSitio
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(F_CargaSitio))
         Me.GB_CPD = New System.Windows.Forms.GroupBox()
+        Me.GBEditar = New System.Windows.Forms.GroupBox()
+        Me.BtnModS = New System.Windows.Forms.Button()
+        Me.LblID = New System.Windows.Forms.Label()
+        Me.TxtID = New System.Windows.Forms.TextBox()
         Me.Lbl_EstadoCivil = New System.Windows.Forms.Label()
         Me.TxtNombreS = New System.Windows.Forms.TextBox()
         Me.Lbl_Sexo = New System.Windows.Forms.Label()
@@ -41,25 +45,35 @@ Partial Class F_CargaSitio
         Me.BtnModD = New System.Windows.Forms.Button()
         Me.BtnAgregarD = New System.Windows.Forms.Button()
         Me.BtnBuscD = New System.Windows.Forms.Button()
-        Me.DGDireccion = New System.Windows.Forms.DataGridView()
+        Me.DGDireccionS = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabPContacto = New System.Windows.Forms.TabPage()
         Me.BtnElimC = New System.Windows.Forms.Button()
         Me.BtnModC = New System.Windows.Forms.Button()
         Me.BtnAgregarC = New System.Windows.Forms.Button()
         Me.BtnBuscC = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.TxtID = New System.Windows.Forms.TextBox()
-        Me.LblID = New System.Windows.Forms.Label()
-        Me.BtnModS = New System.Windows.Forms.Button()
-        Me.GBEditar = New System.Windows.Forms.GroupBox()
+        Me.DGContactoS = New System.Windows.Forms.DataGridView()
+        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GB_CPD.SuspendLayout()
+        Me.GBEditar.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.TabPCarga.SuspendLayout()
         Me.TabPDireccion.SuspendLayout()
-        CType(Me.DGDireccion, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DGDireccionS, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPContacto.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GBEditar.SuspendLayout()
+        CType(Me.DGContactoS, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GB_CPD
@@ -84,6 +98,45 @@ Partial Class F_CargaSitio
         Me.GB_CPD.TabIndex = 30
         Me.GB_CPD.TabStop = False
         Me.GB_CPD.Text = "Carga de Datos"
+        '
+        'GBEditar
+        '
+        Me.GBEditar.BackgroundImage = CType(resources.GetObject("GBEditar.BackgroundImage"), System.Drawing.Image)
+        Me.GBEditar.Controls.Add(Me.BtnModS)
+        Me.GBEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GBEditar.Location = New System.Drawing.Point(105, 21)
+        Me.GBEditar.Name = "GBEditar"
+        Me.GBEditar.Size = New System.Drawing.Size(200, 54)
+        Me.GBEditar.TabIndex = 38
+        Me.GBEditar.TabStop = False
+        Me.GBEditar.Text = "Editar Sitio"
+        '
+        'BtnModS
+        '
+        Me.BtnModS.Location = New System.Drawing.Point(15, 19)
+        Me.BtnModS.Name = "BtnModS"
+        Me.BtnModS.Size = New System.Drawing.Size(77, 24)
+        Me.BtnModS.TabIndex = 12
+        Me.BtnModS.Text = "Modificar"
+        Me.BtnModS.UseVisualStyleBackColor = True
+        '
+        'LblID
+        '
+        Me.LblID.AutoSize = True
+        Me.LblID.BackColor = System.Drawing.Color.Transparent
+        Me.LblID.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblID.Location = New System.Drawing.Point(9, 21)
+        Me.LblID.Name = "LblID"
+        Me.LblID.Size = New System.Drawing.Size(20, 13)
+        Me.LblID.TabIndex = 37
+        Me.LblID.Text = "ID"
+        '
+        'TxtID
+        '
+        Me.TxtID.Location = New System.Drawing.Point(12, 37)
+        Me.TxtID.Name = "TxtID"
+        Me.TxtID.Size = New System.Drawing.Size(46, 20)
+        Me.TxtID.TabIndex = 36
         '
         'Lbl_EstadoCivil
         '
@@ -211,7 +264,7 @@ Partial Class F_CargaSitio
         Me.TabPDireccion.Controls.Add(Me.BtnModD)
         Me.TabPDireccion.Controls.Add(Me.BtnAgregarD)
         Me.TabPDireccion.Controls.Add(Me.BtnBuscD)
-        Me.TabPDireccion.Controls.Add(Me.DGDireccion)
+        Me.TabPDireccion.Controls.Add(Me.DGDireccionS)
         Me.TabPDireccion.Location = New System.Drawing.Point(4, 22)
         Me.TabPDireccion.Name = "TabPDireccion"
         Me.TabPDireccion.Padding = New System.Windows.Forms.Padding(3)
@@ -256,13 +309,54 @@ Partial Class F_CargaSitio
         Me.BtnBuscD.Text = "Buscar"
         Me.BtnBuscD.UseVisualStyleBackColor = True
         '
-        'DGDireccion
+        'DGDireccionS
         '
-        Me.DGDireccion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGDireccion.Location = New System.Drawing.Point(6, 36)
-        Me.DGDireccion.Name = "DGDireccion"
-        Me.DGDireccion.Size = New System.Drawing.Size(553, 139)
-        Me.DGDireccion.TabIndex = 0
+        Me.DGDireccionS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGDireccionS.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
+        Me.DGDireccionS.Location = New System.Drawing.Point(6, 36)
+        Me.DGDireccionS.Name = "DGDireccionS"
+        Me.DGDireccionS.Size = New System.Drawing.Size(553, 139)
+        Me.DGDireccionS.TabIndex = 0
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "Calle"
+        Me.Column1.Name = "Column1"
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Numero"
+        Me.Column2.Name = "Column2"
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Sector"
+        Me.Column3.Name = "Column3"
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Manzana"
+        Me.Column4.Name = "Column4"
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Casa"
+        Me.Column5.Name = "Column5"
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "Torre"
+        Me.Column6.Name = "Column6"
+        '
+        'Column7
+        '
+        Me.Column7.HeaderText = "Piso"
+        Me.Column7.Name = "Column7"
+        '
+        'Column8
+        '
+        Me.Column8.HeaderText = "Departamento"
+        Me.Column8.Name = "Column8"
         '
         'TabPContacto
         '
@@ -271,7 +365,7 @@ Partial Class F_CargaSitio
         Me.TabPContacto.Controls.Add(Me.BtnModC)
         Me.TabPContacto.Controls.Add(Me.BtnAgregarC)
         Me.TabPContacto.Controls.Add(Me.BtnBuscC)
-        Me.TabPContacto.Controls.Add(Me.DataGridView1)
+        Me.TabPContacto.Controls.Add(Me.DGContactoS)
         Me.TabPContacto.Location = New System.Drawing.Point(4, 22)
         Me.TabPContacto.Name = "TabPContacto"
         Me.TabPContacto.Padding = New System.Windows.Forms.Padding(3)
@@ -316,52 +410,44 @@ Partial Class F_CargaSitio
         Me.BtnBuscC.Text = "Buscar"
         Me.BtnBuscC.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'DGContactoS
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(6, 36)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(553, 139)
-        Me.DataGridView1.TabIndex = 0
+        Me.DGContactoS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGContactoS.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column9, Me.Column10, Me.Column11, Me.Column12, Me.Column13, Me.Column14})
+        Me.DGContactoS.Location = New System.Drawing.Point(6, 36)
+        Me.DGContactoS.Name = "DGContactoS"
+        Me.DGContactoS.Size = New System.Drawing.Size(553, 139)
+        Me.DGContactoS.TabIndex = 0
         '
-        'TxtID
+        'Column9
         '
-        Me.TxtID.Location = New System.Drawing.Point(12, 37)
-        Me.TxtID.Name = "TxtID"
-        Me.TxtID.Size = New System.Drawing.Size(46, 20)
-        Me.TxtID.TabIndex = 36
+        Me.Column9.HeaderText = "Celualar"
+        Me.Column9.Name = "Column9"
         '
-        'LblID
+        'Column10
         '
-        Me.LblID.AutoSize = True
-        Me.LblID.BackColor = System.Drawing.Color.Transparent
-        Me.LblID.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblID.Location = New System.Drawing.Point(9, 21)
-        Me.LblID.Name = "LblID"
-        Me.LblID.Size = New System.Drawing.Size(20, 13)
-        Me.LblID.TabIndex = 37
-        Me.LblID.Text = "ID"
+        Me.Column10.HeaderText = "Fijo"
+        Me.Column10.Name = "Column10"
         '
-        'BtnModS
+        'Column11
         '
-        Me.BtnModS.Location = New System.Drawing.Point(15, 19)
-        Me.BtnModS.Name = "BtnModS"
-        Me.BtnModS.Size = New System.Drawing.Size(77, 24)
-        Me.BtnModS.TabIndex = 12
-        Me.BtnModS.Text = "Modificar"
-        Me.BtnModS.UseVisualStyleBackColor = True
+        Me.Column11.HeaderText = "Email"
+        Me.Column11.Name = "Column11"
         '
-        'GBEditar
+        'Column12
         '
-        Me.GBEditar.BackgroundImage = CType(resources.GetObject("GBEditar.BackgroundImage"), System.Drawing.Image)
-        Me.GBEditar.Controls.Add(Me.BtnModS)
-        Me.GBEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GBEditar.Location = New System.Drawing.Point(105, 21)
-        Me.GBEditar.Name = "GBEditar"
-        Me.GBEditar.Size = New System.Drawing.Size(200, 54)
-        Me.GBEditar.TabIndex = 38
-        Me.GBEditar.TabStop = False
-        Me.GBEditar.Text = "Editar Sitio"
+        Me.Column12.HeaderText = "Web"
+        Me.Column12.Name = "Column12"
+        '
+        'Column13
+        '
+        Me.Column13.HeaderText = "Fax"
+        Me.Column13.Name = "Column13"
+        '
+        'Column14
+        '
+        Me.Column14.HeaderText = "Otro"
+        Me.Column14.Name = "Column14"
         '
         'F_CargaSitio
         '
@@ -374,13 +460,13 @@ Partial Class F_CargaSitio
         Me.Text = "Cargar Sitio"
         Me.GB_CPD.ResumeLayout(False)
         Me.GB_CPD.PerformLayout()
+        Me.GBEditar.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.TabPCarga.ResumeLayout(False)
         Me.TabPDireccion.ResumeLayout(False)
-        CType(Me.DGDireccion, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGDireccionS, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPContacto.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GBEditar.ResumeLayout(False)
+        CType(Me.DGContactoS, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -402,16 +488,30 @@ Partial Class F_CargaSitio
     Friend WithEvents BtnModD As System.Windows.Forms.Button
     Friend WithEvents BtnAgregarD As System.Windows.Forms.Button
     Friend WithEvents BtnBuscD As System.Windows.Forms.Button
-    Friend WithEvents DGDireccion As System.Windows.Forms.DataGridView
+    Friend WithEvents DGDireccionS As System.Windows.Forms.DataGridView
     Friend WithEvents TabPContacto As System.Windows.Forms.TabPage
     Friend WithEvents BtnElimC As System.Windows.Forms.Button
     Friend WithEvents BtnModC As System.Windows.Forms.Button
     Friend WithEvents BtnAgregarC As System.Windows.Forms.Button
     Friend WithEvents BtnBuscC As System.Windows.Forms.Button
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents DGContactoS As System.Windows.Forms.DataGridView
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents LblID As System.Windows.Forms.Label
     Friend WithEvents TxtID As System.Windows.Forms.TextBox
     Friend WithEvents BtnModS As System.Windows.Forms.Button
     Friend WithEvents GBEditar As System.Windows.Forms.GroupBox
+    Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column7 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column8 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column9 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column10 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column11 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column12 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column13 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column14 As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

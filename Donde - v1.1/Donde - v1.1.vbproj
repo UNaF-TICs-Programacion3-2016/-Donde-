@@ -117,7 +117,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Funciones\InsertarDatos.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Persona\Persona.vb" />
     <Compile Include="Presentacion\Persona\Agregar Direccion.Designer.vb">
       <DependentUpon>Agregar Direccion.vb</DependentUpon>
     </Compile>
@@ -142,7 +147,7 @@
     <Compile Include="Presentacion\Sitio\Cargar Sitio.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Funciones\Clases.vb" />
+    <Compile Include="Funciones\Conectar.vb" />
     <Compile Include="Presentacion\Donde.designer.vb">
       <DependentUpon>Donde.vb</DependentUpon>
     </Compile>
@@ -153,11 +158,6 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
-    </Compile>
-    <Compile Include="My Project\Resources.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -170,6 +170,7 @@
     <Compile Include="Presentacion\Sitio\Cargar Rubros.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Presentacion\Sitio\Sitios.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Presentacion\Persona\Agregar Direccion.resx">
@@ -189,9 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Sitio\Cargar Rubros.resx">
       <DependentUpon>Cargar Rubros.vb</DependentUpon>
@@ -210,13 +211,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ICONODONDE.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\exit.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Logica\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exitt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICONODONDE.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

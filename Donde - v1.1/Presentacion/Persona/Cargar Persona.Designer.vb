@@ -54,12 +54,6 @@ Partial Class F_CargaPersona
         Me.BtnAgregarD = New System.Windows.Forms.Button()
         Me.BtnBuscD = New System.Windows.Forms.Button()
         Me.DGDireccion = New System.Windows.Forms.DataGridView()
-        Me.TabPContacto = New System.Windows.Forms.TabPage()
-        Me.BtnElimC = New System.Windows.Forms.Button()
-        Me.BtnModC = New System.Windows.Forms.Button()
-        Me.BtnAgregarC = New System.Windows.Forms.Button()
-        Me.BtnBuscC = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -68,6 +62,12 @@ Partial Class F_CargaPersona
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TabPContacto = New System.Windows.Forms.TabPage()
+        Me.BtnElimC = New System.Windows.Forms.Button()
+        Me.BtnModC = New System.Windows.Forms.Button()
+        Me.BtnAgregarC = New System.Windows.Forms.Button()
+        Me.BtnBuscC = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.GB_CPD.SuspendLayout()
         Me.GBEditar.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -396,6 +396,46 @@ Partial Class F_CargaPersona
         Me.DGDireccion.Size = New System.Drawing.Size(553, 139)
         Me.DGDireccion.TabIndex = 0
         '
+        'Column1
+        '
+        Me.Column1.HeaderText = "Calle"
+        Me.Column1.Name = "Column1"
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Numero"
+        Me.Column2.Name = "Column2"
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Sector"
+        Me.Column3.Name = "Column3"
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Manzana"
+        Me.Column4.Name = "Column4"
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Casa"
+        Me.Column5.Name = "Column5"
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "Torre"
+        Me.Column6.Name = "Column6"
+        '
+        'Column7
+        '
+        Me.Column7.HeaderText = "Departamento"
+        Me.Column7.Name = "Column7"
+        '
+        'Column8
+        '
+        Me.Column8.HeaderText = "Piso"
+        Me.Column8.Name = "Column8"
+        '
         'TabPContacto
         '
         Me.TabPContacto.BackgroundImage = CType(resources.GetObject("TabPContacto.BackgroundImage"), System.Drawing.Image)
@@ -455,46 +495,6 @@ Partial Class F_CargaPersona
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(553, 139)
         Me.DataGridView1.TabIndex = 0
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "Calle"
-        Me.Column1.Name = "Column1"
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Numero"
-        Me.Column2.Name = "Column2"
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Sector"
-        Me.Column3.Name = "Column3"
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "Manzana"
-        Me.Column4.Name = "Column4"
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "Casa"
-        Me.Column5.Name = "Column5"
-        '
-        'Column6
-        '
-        Me.Column6.HeaderText = "Torre"
-        Me.Column6.Name = "Column6"
-        '
-        'Column7
-        '
-        Me.Column7.HeaderText = "Departamento"
-        Me.Column7.Name = "Column7"
-        '
-        'Column8
-        '
-        Me.Column8.HeaderText = "Piso"
-        Me.Column8.Name = "Column8"
         '
         'F_CargaPersona
         '

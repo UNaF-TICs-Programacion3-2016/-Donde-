@@ -7,19 +7,11 @@ End Enum
 Public Class F_Donde
     'Atributos
     Friend Accion As TipoAccion
-    Dim OconexionDB As New ConexionBD
+    Friend IdPersona, IdSitio As Long
 
     'Metodos (unciones y Procedimientos)
 
     Private Sub F_Donde_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-        'If OconexionDB.Conectar Then
-        '    MsgBox("Conectado")
-        '    OconexionDB.Cargar_Tabla("Sitio_cab", "sitio_cab", "ID_SITIO")
-        '    MsgBox("Tabla Cargada con Exito")
-        'Else
-        '    MsgBox("No Conectado")
-        'End If
 
     End Sub
 

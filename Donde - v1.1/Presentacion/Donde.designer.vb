@@ -136,7 +136,8 @@ Partial Class F_Donde
         '
         'PictureBox3
         '
-        Me.PictureBox3.Image = Global.Donde_1._0.My.Resources.Resources.exitt
+        Me.PictureBox3.BackgroundImage = Global.Donde_1._0.My.Resources.Resources.exitt
+        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.PictureBox3.Location = New System.Drawing.Point(216, 279)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(43, 42)
@@ -148,11 +149,11 @@ Partial Class F_Donde
         '
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.PictureBox1.Image = Global.Donde_1._0.My.Resources.Resources.ICONODONDE
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 27)
+        Me.PictureBox1.Location = New System.Drawing.Point(1, 25)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(260, 294)
+        Me.PictureBox1.Size = New System.Drawing.Size(257, 295)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.PictureBox1.TabIndex = 7
+        Me.PictureBox1.TabIndex = 10
         Me.PictureBox1.TabStop = False
         '
         'F_Donde
@@ -186,12 +187,12 @@ Partial Class F_Donde
     Friend WithEvents AgregarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ModificarToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents BuscarToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents AyudaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AcercaDeDondeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
     Friend WithEvents SitioToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents RubroToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SubRubroToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 
 End Class
